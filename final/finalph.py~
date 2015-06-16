@@ -14,7 +14,7 @@ def main():
 	print "Path Loss: LNS, TRG, NAK, FS"
 	opcao = raw_input("Ingrese opcion: ")
 	ByPathLoss = FiltroByPathLoss(FilesList, opcao)
-	#print "ByPathLoss", type(ByPathLoss)
+	print "ByPathLoss", type(ByPathLoss)
 	#print ByPathLoss.items(), "\n"
 	#print len(ByPathLoss)
 	"""
@@ -54,7 +54,7 @@ def main():
 
 def ListOfFiles():
 	FilesList = []									  
-	for file_ in os.listdir("/home/william/Simulators/statistics/final/"):
+	for file_ in os.listdir("/home/william/Simulators/Statistics/final/"):
 		if file_.endswith(".csv"):
 			FilesList.append(file_)  	
 			#print(file_) #MUESTRA TODOS LOS FILES EN LA CARPETA
@@ -97,34 +97,34 @@ def FiltroByPathLoss(FilesList, opcao):
 	return ByPathLoss
 
 def FiltroByNodes(ByPathLoss):
-	Filtro = ['-20-','-50-','-100-','-150-']
-	C20Nodes = defaultdict(list)
+	Filtro = ['-25-','-50-','-75-','-100-']
+	C25Nodes = defaultdict(list)
 	C50Nodes = defaultdict(list)
+	C75Nodes = defaultdict(list)
 	C100Nodes = defaultdict(list)
-	C150Nodes = defaultdict(list)
 	CNodes = defaultdict(list)
 	CNodes2 = defaultdict(list)
 	for k, v in ByPathLoss.iteritems():
 		for i in Filtro:
-			if i in k and (i == '-20-'):
-				C20Nodes[k].append(v)
+			if i in k and (i == '-25-'):
+				C25Nodes[k].append(v)
 			if i in k and (i == '-50-'):
 				C50Nodes[k].append(v)
+			if i in k and (i == '-75-'):
+				C75Nodes[k].append(v)
 			if i in k and (i == '-100-'):
 				C100Nodes[k].append(v)
-			if i in k and (i == '-150-'):
-				C150Nodes[k].append(v)
-	CNodes2['20'].append(C20Nodes)
+	CNodes2['25'].append(C25Nodes)
 	CNodes2['50'].append(C50Nodes)
+	CNodes2['75'].append(C75Nodes)
 	CNodes2['100'].append(C100Nodes)
-	CNodes2['150'].append(C150Nodes)
-	#print C20Nodes.items(), "\n"
+	#print C25Nodes.items(), "\n"
 	#print C50Nodes.items(), "\n"
+	#print C75Nodes.items(), "\n"
 	#print C100Nodes.items(), "\n"
-	#print C150Nodes.items(), "\n"
-	CNodes = {'20':C20Nodes, '50':C50Nodes, '100':C100Nodes, '150':C150Nodes}
+	CNodes = {'25':C25Nodes, '50':C50Nodes, '75':C75Nodes, '100':C100Nodes}
 	#print CNodes2, "\n"
-	return CNodes #C20Nodes, C50Nodes, C100Nodes, C150Nodes
+	return CNodes #C25Nodes, C50Nodes, C75Nodes, C100Nodes
 
 def FiltroByProtocolos(ByNodes):
 	Filtro = ['AODVRouting-','DSRUU-','DYMOUM-','OLSR-']
@@ -177,7 +177,7 @@ def Statistics(ByProtocolos):
 	OLSRDesv = [0]*4
 	DSRMean = [0]*4
 	DSRDesv = [0]*4
-	XXX = [20, 50, 100, 150]
+	XXX = [25, 50, 75, 100]
 	for k, v in ByProtocolos.iteritems():
 		#print k
 		for kk, vv in v.iteritems():
@@ -198,7 +198,7 @@ def Statistics(ByProtocolos):
 			mean = M.mean()
 			desvest = np.std(M, ddof=1)
 			#print mean, desvest
-			if '20' in k:
+			if '25' in k:
 				if 'AODV' in kk:
 					AODVMean[0]=mean
 					AODVDesv[0]=desvest
@@ -226,7 +226,7 @@ def Statistics(ByProtocolos):
 					OLSRMean[1]=mean
 					OLSRDesv[1]=desvest
 
-			if '100' in k:
+			if '75' in k:
 				if 'AODV' in kk:
 					AODVMean[2]=mean
 					AODVDesv[2]=desvest
@@ -240,7 +240,7 @@ def Statistics(ByProtocolos):
 					OLSRMean[2]=mean
 					OLSRDesv[2]=desvest
 
-			if '150' in k:
+			if '100' in k:
 				if 'AODV' in kk:
 					AODVMean[3]=mean
 					AODVDesv[3]=desvest
@@ -273,7 +273,7 @@ def Statistics(ByProtocolos):
 		subplot1.errorbar(XXX,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	subplot1.legend(loc='upper left', ncol = 1)
-	sub1.set_xlim((0, 160))
+	subplot1.set_xlim((0, 160))
 	plt.title('Impact on Protocols over Free-Space Pathloss')
 	plt.ylabel('E2ED in seconds')
 	plt.xlabel('Quantity of Nodes')
