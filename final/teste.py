@@ -42,7 +42,6 @@ def FiltroByPathLoss(FilesList, opcao):
 	Recived='rcvdPk'
 	Sent='sentPk'
 	E2ED='E2ED'
-	AODV=[AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE]
 	for f in FilesList:
 		csvfile = csv.DictReader(open(f, 'r'))   ## ABRE EL ARCHIVO A LEER EN FORMATO DICTReader
 		for row in csvfile:
@@ -170,130 +169,86 @@ def FiltroByPathLoss(FilesList, opcao):
 	OLSR = [OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
 	Protocolos = [AODV,DSR,DYMO,OLSR]
 
-	for i in Protocolos:
-		print i
+	AODVMean, AODVDesv, AODVPDR, DYMOMean, DYMODesv, DYMOPDR, OLSRMean, OLSRDesv, OLSRPDR, DSRMean, DSRDesv, DSRPDR  = [[0]*4 for dummy in range(12)]
 
-
-			
-	M00 = np.array(AODV25E2ED.values()).astype(np.float64)
-	mean = M00.mean()
-	desvest = np.std(M00, ddof=1)
+	Statistics(AODV, AODVMean, AODVDesv, AODVPDR)
+	#print AODVMean
+	#print AODVDesv
+	Statistics(DSR, DSRMean, DSRDesv, DSRPDR)
+	#print DSRMean
+	#print DSRDesv
+	Statistics(DYMO, DYMOMean, DYMODesv, DYMOPDR)
+	#print DYMOMean
+	#print DYMODesv
+	Statistics(OLSR, OLSRMean, OLSRDesv, OLSRPDR)
+	#print OLSRMean
+	#print OLSRDesv
 	
-	return
-"""
-def Statistics(ByProtocolos):
-	Filtro = ['endToEndDelay','rcvdPk','sentPk']
-	E2ED = defaultdict(list)
-	Rate = defaultdict(list)
-	Stats = defaultdict(list)
-	AODVMean = [0]*4
-	AODVDesv = [0]*4
-	DYMOMean = [0]*4
-	DYMODesv = [0]*4
-	OLSRMean = [0]*4
-	OLSRDesv = [0]*4
-	DSRMean = [0]*4
-	DSRDesv = [0]*4
-	XXX = [25, 50, 75, 100]
-	for k, v in ByProtocolos.iteritems():
-		#print k
-		for kk, vv in v.iteritems():
-			#print kk
-			for kkk, vvv in vv.iteritems():
-				#print kkk
-				for i in Filtro:
-					if i in kkk and (i == 'endToEndDelay'):
-						E2ED[i].append(vvv)
-					if i in kkk and (i == 'rcvdPk'):
-						Rate[i].append(vvv)
-					if i in kkk and (i == 'sentPk'):
-						Rate[i].append(vvv)
-			#print E2ED, "\n"
-			#print Rate, "\n"
-			M = np.array(E2ED.values()).astype(np.float64)
-			#print M
-			mean = M.mean()
-			desvest = np.std(M, ddof=1)
-			#print mean, desvest
-			if '25' in k:
-				if 'AODV' in kk:
-					AODVMean[0]=mean
-					AODVDesv[0]=desvest
-				if 'DYMO' in kk:
-					DYMOMean[0]=mean
-					DYMODesv[0]=desvest
-				if 'DSR' in kk:
-					DSRMean[0]=mean
-					DSRDesv[0]=desvest
-				if 'OLSR' in kk:
-					OLSRMean[0]=mean
-					OLSRDesv[0]=desvest
-
-			if '50' in k:
-				if 'AODV' in kk:
-					AODVMean[1]=mean
-					AODVDesv[1]=desvest
-				if 'DYMO' in kk:
-					DYMOMean[1]=mean
-					DYMODesv[1]=desvest
-				if 'DSR' in kk:
-					DSRMean[1]=mean
-					DSRDesv[1]=desvest
-				if 'OLSR' in kk:
-					OLSRMean[1]=mean
-					OLSRDesv[1]=desvest
-
-			if '75' in k:
-				if 'AODV' in kk:
-					AODVMean[2]=mean
-					AODVDesv[2]=desvest
-				if 'DYMO' in kk:
-					DYMOMean[2]=mean
-					DYMODesv[2]=desvest
-				if 'DSR' in kk:
-					DSRMean[2]=mean
-					DSRDesv[2]=desvest
-				if 'OLSR' in kk:
-					OLSRMean[2]=mean
-					OLSRDesv[2]=desvest
-
-			if '100' in k:
-				if 'AODV' in kk:
-					AODVMean[3]=mean
-					AODVDesv[3]=desvest
-				if 'DYMO' in kk:
-					DYMOMean[3]=mean
-					DYMODesv[3]=desvest
-				if 'DSR' in kk:
-					DSRMean[3]=mean
-					DSRDesv[3]=desvest
-				if 'OLSR' in kk:
-					OLSRMean[3]=mean
-					OLSRDesv[3]=desvest
-
-			E2ED.clear()
-			Rate.clear()
-	print "AODV", AODVMean, AODVDesv
-	print "DSR", DSRMean, DSRDesv
-	print "DYMO", DYMOMean, DYMODesv
-	print "OLSR", OLSRMean, OLSRDesv
+	XAxis = [25, 50, 75, 100]
 	TODO=[AODVMean,DSRMean,DYMOMean,OLSRMean]
 	TODODesv=[AODVDesv,DSRDesv,DYMODesv,OLSRDesv]
-	i=0
-	print TODO
-	print TODO[2]
+	
 	label=["AODV","DSR","DYMO","OLSR"]
 	marker=['*','p','o','D']
+	
 	fig = plt.figure(figsize=(20, 10)) 
 	subplot1 = fig.add_subplot(1, 1, 1)
+	i=0
 	while i<4:
-		subplot1.errorbar(XXX,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
+		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	subplot1.legend(loc='upper left', ncol = 1)
 	subplot1.set_xlim((0, 160))
 	plt.title('Impact on Protocols over Free-Space Pathloss')
 	plt.ylabel('E2ED in seconds')
 	plt.xlabel('Quantity of Nodes')
+	plt.grid()
 	plt.show()
-"""
+
+	return
+
+def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
+	Mean, Desv, PDR = [[0]*4 for dummy in range(3)]
+	m=0
+	for i in Prot:
+		if m == 0:
+			M = np.array(i.values()).astype(np.float64)
+			mean = M.mean()
+			desvest = np.std(M, ddof=1)
+			ProtMeans[0]=mean
+			ProtDesvs[0]=desvest
+			m+=1
+		elif m == 1:
+			m+=1
+		elif m == 2:
+			M = np.array(i.values()).astype(np.float64)
+			mean = M.mean()
+			desvest = np.std(M, ddof=1)
+			ProtMeans[1]=mean
+			ProtDesvs[1]=desvest
+			m+=1
+		elif m == 3:
+			m+=1
+		elif m == 4:
+			M = np.array(i.values()).astype(np.float64)
+			mean = M.mean()
+			desvest = np.std(M, ddof=1)
+			ProtMeans[2]=mean
+			ProtDesvs[2]=desvest
+			m+=1
+		elif m == 5:
+			m+=1
+		elif m == 6:
+			M = np.array(i.values()).astype(np.float64)
+			mean = M.mean()
+			desvest = np.std(M, ddof=1)
+			ProtMeans[3]=mean
+			ProtDesvs[3]=desvest
+			m+=1
+		elif m == 7:
+			m+=1
+	#print ProtMeans
+	#print ProtDesvs
+	return
+
 main()
