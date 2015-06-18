@@ -187,6 +187,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	XAxis = [25, 50, 75, 100]
 	TODO=[AODVMean,DSRMean,DYMOMean,OLSRMean]
 	TODODesv=[AODVDesv,DSRDesv,DYMODesv,OLSRDesv]
+	TODOPDR=[AODVPDR,DSRPDR,DYMOPDR,OLSRPDR]
 	
 	label=["AODV","DSR","DYMO","OLSR"]
 	marker=['*','p','o','D']
@@ -197,18 +198,71 @@ def FiltroByPathLoss(FilesList, opcao):
 	while i<4:
 		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
-	subplot1.legend(loc='upper left', ncol = 1)
-	subplot1.set_xlim((0, 160))
-	plt.title('Impact on Protocols over Free-Space Pathloss')
-	plt.ylabel('E2ED in seconds')
-	plt.xlabel('Quantity of Nodes')
-	plt.grid()
+	
+	subplot1.legend(loc='upper left', ncol = 1, prop={'size':20})
+	subplot1.set_xlim((0, 125))
+	subplot1.set_ylim((0, 5))
+	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	plt.ylabel('E2ED in seconds', fontsize=20)
+	plt.xlabel('Quantity of Nodes', fontsize=20)
+	
+	# major ticks every 25, minor ticks every 5 en el eje X                                   
+	major_ticksx = np.arange(0, 126, 25)
+	minor_ticksx = np.arange(0, 126, 5)
+	# major ticks every 1, minor ticks every 0.25 en el eje Y
+	major_ticksy = np.arange(0, 5.1, 1)
+	minor_ticksy = np.arange(0, 5, 0.25)
+	#Dibujar en el plot
+	subplot1.set_xticks(major_ticksx) 
+	subplot1.set_xticks(minor_ticksx, minor=True)
+	subplot1.set_yticks(major_ticksy)
+	subplot1.set_yticks(minor_ticksy, minor=True)
+	# 		and a corresponding grid on both axes                                                    
+	#		subplot1.grid(which='both')
+	# differnet settings for the grids:                               
+	subplot1.grid(which='minor', alpha=0.4)
+	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
+	plt.show()
+
+	
+
+
+	figProt = plt.figure(figsize=(20, 10)) 
+	subplot2 = figProt.add_subplot(1, 1, 1)
+	i=0
+	while i<4:
+		subplot2.errorbar(XAxis,TODOPDR[i], label=label[i], marker = marker[i])
+		i+=1
+	
+	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
+	subplot2.set_xlim((0, 125))
+	subplot2.set_ylim((0, 0.5))
+	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	plt.ylabel('Packet Delivery Rate', fontsize=20)
+	plt.xlabel('Quantity of Nodes', fontsize=20)
+	
+	# major ticks every 25, minor ticks every 5 en el eje X                                   
+	major_ticksx = np.arange(0, 126, 25)
+	minor_ticksx = np.arange(0, 126, 5)
+	# major ticks every 1, minor ticks every 0.25 en el eje Y
+	major_ticksy = np.arange(0, 0.5001, 0.1)
+	minor_ticksy = np.arange(0, 0.5001, 0.025)
+	#Dibujar en el plot
+	subplot2.set_xticks(major_ticksx) 
+	subplot2.set_xticks(minor_ticksx, minor=True)
+	subplot2.set_yticks(major_ticksy)
+	subplot2.set_yticks(minor_ticksy, minor=True)
+	# 		and a corresponding grid on both axes                                                    
+	#		subplot1.grid(which='both')
+	# differnet settings for the grids:                               
+	subplot2.grid(which='minor', alpha=0.4)
+	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
 	plt.show()
 
 	return
 
 def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
-	Mean, Desv, PDR = [[0]*4 for dummy in range(3)]
+	sumS, sumR = [[0]*4 for dummy in range(2)]
 	m=0
 	for i in Prot:
 		if m == 0:
@@ -219,6 +273,14 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 			ProtDesvs[0]=desvest
 			m+=1
 		elif m == 1:
+			for k,v in i.iteritems():
+				if 'rcvdPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumR[0] = np.sum(M)
+				if 'sentPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumS[0] = np.sum(M)
+			ProtPDR[0]=sumR[0]/sumS[0]
 			m+=1
 		elif m == 2:
 			M = np.array(i.values()).astype(np.float64)
@@ -228,6 +290,14 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 			ProtDesvs[1]=desvest
 			m+=1
 		elif m == 3:
+			for k,v in i.iteritems():
+				if 'rcvdPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumR[1] = np.sum(M)
+				if 'sentPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumS[1] = np.sum(M)
+			ProtPDR[1]=sumR[1]/sumS[1]
 			m+=1
 		elif m == 4:
 			M = np.array(i.values()).astype(np.float64)
@@ -237,6 +307,14 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 			ProtDesvs[2]=desvest
 			m+=1
 		elif m == 5:
+			for k,v in i.iteritems():
+				if 'rcvdPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumR[2] = np.sum(M)
+				if 'sentPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumS[2] = np.sum(M)
+			ProtPDR[2]=sumR[2]/sumS[2]
 			m+=1
 		elif m == 6:
 			M = np.array(i.values()).astype(np.float64)
@@ -246,9 +324,18 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 			ProtDesvs[3]=desvest
 			m+=1
 		elif m == 7:
+			for k,v in i.iteritems():
+				if 'rcvdPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumR[3] = np.sum(M)
+				if 'sentPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumS[3] = np.sum(M)
+			#ProtPDR[3]=sumR[3]/sumS[3]
 			m+=1
 	#print ProtMeans
 	#print ProtDesvs
+	#print PDR
 	return
 
 main()
