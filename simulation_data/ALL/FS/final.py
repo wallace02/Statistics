@@ -222,6 +222,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot1.grid(which='minor', alpha=0.4)
 	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
+	plt.savefig('FS-E2ED.png', format='png')
 	plt.show()
 
 	
@@ -257,6 +258,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot2.grid(which='minor', alpha=0.4)
 	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
+	plt.savefig('FS-PDR.png', format='png')
 	plt.show()
 
 	return

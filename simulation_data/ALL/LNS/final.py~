@@ -177,10 +177,10 @@ def FiltroByPathLoss(FilesList, opcao):
 	Statistics(DSR, DSRMean, DSRDesv, DSRPDR)
 	#print DSRMean
 	#print DSRDesv
-	#Statistics(DYMO, DYMOMean, DYMODesv, DYMOPDR)
+	Statistics(DYMO, DYMOMean, DYMODesv, DYMOPDR)
 	#print DYMOMean
 	#print DYMODesv
-	#Statistics(OLSR, OLSRMean, OLSRDesv, OLSRPDR)
+	Statistics(OLSR, OLSRMean, OLSRDesv, OLSRPDR)
 	#print OLSRMean
 	#print OLSRDesv
 	
@@ -201,8 +201,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	
 	subplot1.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot1.set_xlim((0, 125))
-	subplot1.set_ylim((0, 10))
-	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	subplot1.set_ylim((0, 5))
+	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
 	plt.ylabel('E2ED in seconds', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -222,6 +222,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot1.grid(which='minor', alpha=0.4)
 	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
+	plt.savefig('LNS-E2ED.png', format='png')
 	plt.show()
 
 	
@@ -237,7 +238,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
 	subplot2.set_ylim((0, 0.5))
-	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -245,8 +246,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	major_ticksx = np.arange(0, 126, 25)
 	minor_ticksx = np.arange(0, 126, 5)
 	# major ticks every 1, minor ticks every 0.25 en el eje Y
-	major_ticksy = np.arange(0, 1.001, 0.1)
-	minor_ticksy = np.arange(0, 1.001, 0.025)
+	major_ticksy = np.arange(0, 0.5001, 0.1)
+	minor_ticksy = np.arange(0, 0.5001, 0.025)
 	#Dibujar en el plot
 	subplot2.set_xticks(major_ticksx) 
 	subplot2.set_xticks(minor_ticksx, minor=True)
@@ -257,6 +258,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot2.grid(which='minor', alpha=0.4)
 	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
+	plt.savefig('LNS-PDR.png', format='png')
 	plt.show()
 
 	return
@@ -331,7 +333,7 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 				if 'sentPk' in k:
 					M = np.array(v).astype(np.float64)
 					sumS[3] = np.sum(M)
-			#ProtPDR[3]=sumR[3]/sumS[3]
+			ProtPDR[3]=sumR[3]/sumS[3]
 			m+=1
 	#print ProtMeans
 	#print ProtDesvs
