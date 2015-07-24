@@ -11,7 +11,7 @@ def main():
 	print "FilesList"
 	print FilesList, "\n"
 
-	print "Path Loss: LNS, TRG, NAK, FS"
+	print "Path Loss: AODV, DSR,DYMO,OLSR"
 	opcao = raw_input("Ingrese opcion: ")
 	ByPathLoss = FiltroByPathLoss(FilesList, opcao)
 	#print "ByPathLoss", type(ByPathLoss)
@@ -21,18 +21,15 @@ def main():
 
 def ListOfFiles():
 	FilesList = []									  
-	for file_ in os.listdir("/home/william/Simulators/Statistics/simulation_data/ALL/FS"):
+	for file_ in os.listdir("/home/william/Simulators/Statistics/simulation_data/ALL"):
 		if file_.endswith(".csv"):
 			FilesList.append(file_)  	
 			#print(file_) #MUESTRA TODOS LOS FILES EN LA CARPETA
 			#print FilesList   #MUESTRA TODOS LOS FILES GUARDADOS EN LA LISTA 
-	for file_ in os.listdir("/home/william/Simulators/Statistics/simulation_data/ALL/LNS"):
-		if file_.endswith(".csv"):
-			FilesList.append(file_)
 	return FilesList
 
 def FiltroByPathLoss(FilesList, opcao):
-	Filtro = ['-FS-','-LNS-','-NAK-','-TRG-']
+	Filtro = ['AODVRouting-','DSRUU-','DYMOUM-','OLSR-']
 	for i in Filtro:
 		if opcao in i:
 			opcao = i
@@ -50,122 +47,123 @@ def FiltroByPathLoss(FilesList, opcao):
 		for row in csvfile:
 			for k, v in row.iteritems():
 				if opcao in k:
-					if 'AODVRouting-' in k:
+					if '-FS-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								AODV25E2ED[E2ED].append(v)
+								FS25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								AODV25RATE[Recived].append(v)
+								FS25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								AODV25RATE[Sent].append(v)
+								FS25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								AODV50E2ED[E2ED].append(v)
+								FS50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								AODV50RATE[Recived].append(v)
+								FS50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								AODV50RATE[Sent].append(v)
+								FS50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								AODV75E2ED[E2ED].append(v)
+								FS75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								AODV75RATE[Recived].append(v)
+								FS75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								AODV75RATE[Sent].append(v)
+								FS75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								AODV100E2ED[E2ED].append(v)
+								FS100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								AODV100RATE[Recived].append(v)
+								FS100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								AODV100RATE[Sent].append(v)
-					elif 'DSRUU-' in k:
+								FS100RATE[Sent].append(v)
+					elif '-LNS-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								DSR25E2ED[E2ED].append(v)
+								LNS25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DSR25RATE[Recived].append(v)
+								LNS25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DSR25RATE[Sent].append(v)
+								LNS25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								DSR50E2ED[E2ED].append(v)
+								LNS50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DSR50RATE[Recived].append(v)
+								LNS50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DSR50RATE[Sent].append(v)
+								LNS50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								DSR75E2ED[E2ED].append(v)
+								LNs75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DSR75RATE[Recived].append(v)
+								LNS75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DSR75RATE[Sent].append(v)
+								LNS75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								DSR100E2ED[E2ED].append(v)
+								LNS100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DSR100RATE[Recived].append(v)
+								LNS100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DSR100RATE[Sent].append(v)
-					elif 'DYMOUM-' in k:
+								LNS100RATE[Sent].append(v)
+					elif '-NAK-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								DYMO25E2ED[E2ED].append(v)
+								NAK25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DYMO25RATE[Recived].append(v)
+								NAK25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DYMO25RATE[Sent].append(v)
+								NAK25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								DYMO50E2ED[E2ED].append(v)
+								NAK50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DYMO50RATE[Recived].append(v)
+								NAK50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DYMO50RATE[Sent].append(v)
+								NAK50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								DYMO75E2ED[E2ED].append(v)
+								NAK75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DYMO75RATE[Recived].append(v)
+								NAK75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DYMO75RATE[Sent].append(v)
+								NAK75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								DYMO100E2ED[E2ED].append(v)
+								NAK100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								DYMO100RATE[Recived].append(v)
+								NAK100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								DYMO100RATE[Sent].append(v)
-					elif 'OLSR-' in k:
+								NAK100RATE[Sent].append(v)
+					elif '-TRG-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								OLSR25E2ED[E2ED].append(v)
+								TRG25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								OLSR25RATE[Recived].append(v)
+								TRG25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								OLSR25RATE[Sent].append(v)
+								TRG25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								OLSR50E2ED[E2ED].append(v)
+								TRG50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								OLSR50RATE[Recived].append(v)
+								TRG50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								OLSR50RATE[Sent].append(v)
+								TRG50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								OLSR75E2ED[E2ED].append(v)
+								TRG75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								OLSR75RATE[Recived].append(v)
+								TRG75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								OLSR75RATE[Sent].append(v)
+								TRG75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								OLSR100E2ED[E2ED].append(v)
+								TRG100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								OLSR100RATE[Recived].append(v)
+								TRG100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								OLSR100RATE[Sent].append(v)
+								TRG100RATE[Sent].append(v)
+
 	AODV = [AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE]
 	DSR = [DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE]
 	DYMO = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
