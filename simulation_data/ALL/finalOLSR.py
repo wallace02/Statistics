@@ -241,7 +241,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
-	subplot2.set_ylim((0, 0.5))
+	subplot2.set_ylim((0, 0.7))
 	plt.title('Impact of OLSR over Pathloss', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
@@ -250,8 +250,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	major_ticksx = np.arange(0, 126, 25)
 	minor_ticksx = np.arange(0, 126, 5)
 	# major ticks every 1, minor ticks every 0.25 en el eje Y
-	major_ticksy = np.arange(0, 0.5001, 0.1)
-	minor_ticksy = np.arange(0, 0.5001, 0.025)
+	major_ticksy = np.arange(0, 0.7001, 0.1)
+	minor_ticksy = np.arange(0, 0.7001, 0.025)
 	#Dibujar en el plot
 	subplot2.set_xticks(major_ticksx) 
 	subplot2.set_xticks(minor_ticksx, minor=True)
