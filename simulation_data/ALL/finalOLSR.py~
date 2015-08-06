@@ -274,7 +274,7 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 		if m == 0:
 			M = np.array(i.values()).astype(np.float64)
 			mean = M.mean()
-			desvest = np.std(M, ddof=1)
+			desvest = np.std(M, ddof=1) / 2
 			ProtMeans[0]=mean
 			ProtDesvs[0]=desvest
 			m+=1
@@ -291,7 +291,7 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 		elif m == 2:
 			M = np.array(i.values()).astype(np.float64)
 			mean = M.mean()
-			desvest = np.std(M, ddof=1)
+			desvest = np.std(M, ddof=1) / 2
 			ProtMeans[1]=mean
 			ProtDesvs[1]=desvest
 			m+=1
@@ -308,7 +308,7 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 		elif m == 4:
 			M = np.array(i.values()).astype(np.float64)
 			mean = M.mean()
-			desvest = np.std(M, ddof=1)
+			desvest = np.std(M, ddof=1) / 2
 			ProtMeans[2]=mean
 			ProtDesvs[2]=desvest
 			m+=1
@@ -325,7 +325,7 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 		elif m == 6:
 			M = np.array(i.values()).astype(np.float64)
 			mean = M.mean()
-			desvest = np.std(M, ddof=1)
+			desvest = np.std(M, ddof=1) / 2
 			ProtMeans[3]=mean
 			ProtDesvs[3]=desvest
 			m+=1

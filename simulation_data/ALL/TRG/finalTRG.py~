@@ -11,10 +11,9 @@ def main():
 	print "FilesList"
 	print FilesList, "\n"
 
-	#print "Path Loss: AODV, DSR,DYMO,OLSR"
-	#opcao = raw_input("Ingrese opcion: ")
-	opcao = "OLSR"
-	ByProt = FiltroByPathLoss(FilesList, opcao)
+	print "Path Loss: LNS, TRG, NAK, FS"
+	opcao = raw_input("Ingrese opcion: ")
+	ByPathLoss = FiltroByPathLoss(FilesList, opcao)
 	#print "ByPathLoss", type(ByPathLoss)
 	#print ByPathLoss.items(), "\n"
 	#print len(ByPathLoss)
@@ -22,7 +21,7 @@ def main():
 
 def ListOfFiles():
 	FilesList = []									  
-	for file_ in os.listdir("/home/william/Simulators/Statistics/simulation_data/ALL"):
+	for file_ in os.listdir("/home/william/Simulators/Statistics/simulation_data/ALL/TRG"):
 		if file_.endswith(".csv"):
 			FilesList.append(file_)  	
 			#print(file_) #MUESTRA TODOS LOS FILES EN LA CARPETA
@@ -30,17 +29,16 @@ def ListOfFiles():
 	return FilesList
 
 def FiltroByPathLoss(FilesList, opcao):
-	Filtro = ['AODVRouting-','DSRUU-','DYMOUM-','OLSR-']
+	Filtro = ['-FS-','-LNS-','-NAK-','-TRG-']
 	for i in Filtro:
 		if opcao in i:
 			opcao = i
 			break	
 
-	FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE  = [defaultdict(list) for dummy in range(8)]
-	LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE  = [defaultdict(list) for dummy in range(8)]
-	NAK25E2ED, NAK25RATE, NAK50E2ED, NAK50RATE, NAK75E2ED, NAK75RATE, NAK100E2ED, NAK100RATE  = [defaultdict(list) for dummy in range(8)]
-	TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE  = [defaultdict(list) for dummy in range(8)]
-	
+	AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE  = [defaultdict(list) for dummy in range(8)]
+	DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE  = [defaultdict(list) for dummy in range(8)]
+	DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE  = [defaultdict(list) for dummy in range(8)]
+	OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE  = [defaultdict(list) for dummy in range(8)]
 	Recived='rcvdPk'
 	Sent='sentPk'
 	E2ED='E2ED'
@@ -49,164 +47,162 @@ def FiltroByPathLoss(FilesList, opcao):
 		for row in csvfile:
 			for k, v in row.iteritems():
 				if opcao in k:
-					if '-FS-' in k:
+					if 'AODVRouting-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								FS25E2ED[E2ED].append(v)
+								AODV25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								FS25RATE[Recived].append(v)
+								AODV25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								FS25RATE[Sent].append(v)
+								AODV25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								FS50E2ED[E2ED].append(v)
+								AODV50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								FS50RATE[Recived].append(v)
+								AODV50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								FS50RATE[Sent].append(v)
+								AODV50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								FS75E2ED[E2ED].append(v)
+								AODV75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								FS75RATE[Recived].append(v)
+								AODV75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								FS75RATE[Sent].append(v)
+								AODV75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								FS100E2ED[E2ED].append(v)
+								AODV100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								FS100RATE[Recived].append(v)
+								AODV100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								FS100RATE[Sent].append(v)
-					elif '-LNS-' in k:
+								AODV100RATE[Sent].append(v)
+					elif 'DSRUU-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								LNS25E2ED[E2ED].append(v)
+								DSR25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								LNS25RATE[Recived].append(v)
+								DSR25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								LNS25RATE[Sent].append(v)
+								DSR25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								LNS50E2ED[E2ED].append(v)
+								DSR50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								LNS50RATE[Recived].append(v)
+								DSR50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								LNS50RATE[Sent].append(v)
+								DSR50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								LNS75E2ED[E2ED].append(v)
+								DSR75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								LNS75RATE[Recived].append(v)
+								DSR75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								LNS75RATE[Sent].append(v)
+								DSR75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								LNS100E2ED[E2ED].append(v)
+								DSR100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								LNS100RATE[Recived].append(v)
+								DSR100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								LNS100RATE[Sent].append(v)
-					elif '-TRG-' in k:
+								DSR100RATE[Sent].append(v)
+					elif 'DYMOUM-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								TRG25E2ED[E2ED].append(v)
+								DYMO25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								TRG25RATE[Recived].append(v)
+								DYMO25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								TRG25RATE[Sent].append(v)
+								DYMO25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								TRG50E2ED[E2ED].append(v)
+								DYMO50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								TRG50RATE[Recived].append(v)
+								DYMO50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								TRG50RATE[Sent].append(v)
+								DYMO50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								TRG75E2ED[E2ED].append(v)
+								DYMO75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								TRG75RATE[Recived].append(v)
+								DYMO75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								TRG75RATE[Sent].append(v)
+								DYMO75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								TRG100E2ED[E2ED].append(v)
+								DYMO100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								TRG100RATE[Recived].append(v)
+								DYMO100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								TRG100RATE[Sent].append(v)
-	"""
-					elif '-NAK-' in k:
+								DYMO100RATE[Sent].append(v)
+					elif 'OLSR-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
-								NAK25E2ED[E2ED].append(v)
+								OLSR25E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								NAK25RATE[Recived].append(v)
+								OLSR25RATE[Recived].append(v)
 							if 'sentPk' in k:
-								NAK25RATE[Sent].append(v)
+								OLSR25RATE[Sent].append(v)
 						if '-50n-' in k:
 							if 'endToEndDelay' in k:
-								NAK50E2ED[E2ED].append(v)
+								OLSR50E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								NAK50RATE[Recived].append(v)
+								OLSR50RATE[Recived].append(v)
 							if 'sentPk' in k:
-								NAK50RATE[Sent].append(v)
+								OLSR50RATE[Sent].append(v)
 						if '-75n-' in k:
 							if 'endToEndDelay' in k:
-								NAK75E2ED[E2ED].append(v)
+								OLSR75E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								NAK75RATE[Recived].append(v)
+								OLSR75RATE[Recived].append(v)
 							if 'sentPk' in k:
-								NAK75RATE[Sent].append(v)
+								OLSR75RATE[Sent].append(v)
 						if '-100n-' in k:
 							if 'endToEndDelay' in k:
-								NAK100E2ED[E2ED].append(v)
+								OLSR100E2ED[E2ED].append(v)
 							if 'rcvdPk' in k:
-								NAK100RATE[Recived].append(v)
+								OLSR100RATE[Recived].append(v)
 							if 'sentPk' in k:
-								NAK100RATE[Sent].append(v)
-	"""
-	FS = [FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
-	LNS = [LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
-	TRG = [TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE]
-	#NAK = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
-	Protocolos = [FS,LNS] #[FS,LNS,NAK,TRG]
+								OLSR100RATE[Sent].append(v)
+	AODV = [AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE]
+	DSR = [DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE]
+	DYMO = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
+	OLSR = [OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
+	Protocolos = [AODV,DSR,DYMO,OLSR]
 
-	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*4 for dummy in range(12)]
+	AODVMean, AODVDesv, AODVPDR, DYMOMean, DYMODesv, DYMOPDR, OLSRMean, OLSRDesv, OLSRPDR, DSRMean, DSRDesv, DSRPDR  = [[0]*4 for dummy in range(12)]
 
-	Statistics(FS, FSMean, FSDesv, FSPDR)
+	Statistics(AODV, AODVMean, AODVDesv, AODVPDR)
 	#print AODVMean
 	#print AODVDesv
-	Statistics(LNS, LNSMean, LNSDesv, LNSPDR)
+	Statistics(DSR, DSRMean, DSRDesv, DSRPDR)
 	#print DSRMean
 	#print DSRDesv
-	Statistics(TRG, TRGMean, TRGDesv, TRGPDR)
+	Statistics(DYMO, DYMOMean, DYMODesv, DYMOPDR)
 	#print DYMOMean
 	#print DYMODesv
-	##################Statistics(NAK, NAKMean, NAKDesv, NAKPDR)
+	Statistics(OLSR, OLSRMean, OLSRDesv, OLSRPDR)
 	#print OLSRMean
 	#print OLSRDesv
 	
 	XAxis = [25, 50, 75, 100]
-	TODO=[FSMean,LNSMean,TRGMean] #,NAKMean]
-	TODODesv=[FSDesv,LNSDesv,TRGDesv] #,NAKDesv]
-	TODOPDR=[FSPDR,LNSPDR,TRGPDR] #,NAKPDR]
+	TODO=[AODVMean,DSRMean,DYMOMean,OLSRMean]
+	TODODesv=[AODVDesv,DSRDesv,DYMODesv,OLSRDesv]
+	TODOPDR=[AODVPDR,DSRPDR,DYMOPDR,OLSRPDR]
 	
-	label=["FS","LNS","TRG"] #,"NAK"]
-	marker=['*','p','o'] #,'D']
+	label=["AODV","DSR","DYMO","OLSR"]
+	marker=['*','p','o','D']
 	
 	fig = plt.figure(figsize=(20, 10)) 
 	subplot1 = fig.add_subplot(1, 1, 1)
 	i=0
-	while i<3: #4:
+	while i<4:
 		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	
 	subplot1.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot1.set_xlim((0, 125))
 	subplot1.set_ylim((0, 5))
-	plt.title('Impact of OLSR over Pathloss', fontsize=20)
+	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
 	plt.ylabel('E2ED in seconds', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -226,8 +222,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot1.grid(which='minor', alpha=0.4)
 	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('OLSR-E2ED.png', format='png')
-	#plt.show()
+	plt.savefig('LNS-E2ED.png', format='png')
+	plt.show()
 
 	
 
@@ -235,14 +231,14 @@ def FiltroByPathLoss(FilesList, opcao):
 	figProt = plt.figure(figsize=(20, 10)) 
 	subplot2 = figProt.add_subplot(1, 1, 1)
 	i=0
-	while i<3: #4:
+	while i<4:
 		subplot2.errorbar(XAxis,TODOPDR[i], label=label[i], marker = marker[i])
 		i+=1
 	
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
-	subplot2.set_ylim((0, 0.7))
-	plt.title('Impact of OLSR over Pathloss', fontsize=20)
+	subplot2.set_ylim((0, 0.5))
+	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -250,8 +246,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	major_ticksx = np.arange(0, 126, 25)
 	minor_ticksx = np.arange(0, 126, 5)
 	# major ticks every 1, minor ticks every 0.25 en el eje Y
-	major_ticksy = np.arange(0, 0.7001, 0.1)
-	minor_ticksy = np.arange(0, 0.7001, 0.025)
+	major_ticksy = np.arange(0, 0.8001, 0.1)
+	minor_ticksy = np.arange(0, 0.8001, 0.025)
 	#Dibujar en el plot
 	subplot2.set_xticks(major_ticksx) 
 	subplot2.set_xticks(minor_ticksx, minor=True)
@@ -262,8 +258,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot2.grid(which='minor', alpha=0.4)
 	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('OLSR-PDR.png', format='png')
-	#plt.show()
+	plt.savefig('LNS-PDR.png', format='png')
+	plt.show()
 
 	return
 
