@@ -107,36 +107,6 @@ def FiltroByPathLoss(FilesList, opcao):
 								LNS100RATE[Recived].append(v)
 							if 'sentPk' in k:
 								LNS100RATE[Sent].append(v)
-	"""
-					elif '-NAK-' in k:
-						if '-25n-' in k:
-							if 'endToEndDelay' in k:
-								NAK25E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK25RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK25RATE[Sent].append(v)
-						if '-50n-' in k:
-							if 'endToEndDelay' in k:
-								NAK50E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK50RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK50RATE[Sent].append(v)
-						if '-75n-' in k:
-							if 'endToEndDelay' in k:
-								NAK75E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK75RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK75RATE[Sent].append(v)
-						if '-100n-' in k:
-							if 'endToEndDelay' in k:
-								NAK100E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK100RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK100RATE[Sent].append(v)
 					elif '-TRG-' in k:
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
@@ -167,10 +137,40 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								TRG100RATE[Sent].append(v)
 	"""
+					elif '-NAK-' in k:
+						if '-25n-' in k:
+							if 'endToEndDelay' in k:
+								NAK25E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK25RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK25RATE[Sent].append(v)
+						if '-50n-' in k:
+							if 'endToEndDelay' in k:
+								NAK50E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK50RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK50RATE[Sent].append(v)
+						if '-75n-' in k:
+							if 'endToEndDelay' in k:
+								NAK75E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK75RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK75RATE[Sent].append(v)
+						if '-100n-' in k:
+							if 'endToEndDelay' in k:
+								NAK100E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK100RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK100RATE[Sent].append(v)
+	"""
 	FS = [FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
 	LNS = [LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
+	TRG = [TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE]
 	#NAK = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
-	#TRG = [OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
 	Protocolos = [FS,LNS] #[FS,LNS,NAK,TRG]
 
 	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*4 for dummy in range(12)]
@@ -181,25 +181,25 @@ def FiltroByPathLoss(FilesList, opcao):
 	Statistics(LNS, LNSMean, LNSDesv, LNSPDR)
 	#print DSRMean
 	#print DSRDesv
-	##################Statistics(NAK, NAKMean, NAKDesv, NAKPDR)
+	Statistics(TRG, TRGMean, TRGDesv, TRGPDR)
 	#print DYMOMean
 	#print DYMODesv
-	##################Statistics(TRG, TRGMean, TRGDesv, TRGPDR)
+	##################Statistics(NAK, NAKMean, NAKDesv, NAKPDR)
 	#print OLSRMean
 	#print OLSRDesv
 	
 	XAxis = [25, 50, 75, 100]
-	TODO=[FSMean,LNSMean] #,NAKMean,TRGMean]
-	TODODesv=[FSDesv,LNSDesv] #,NAKDesv,TRGDesv]
-	TODOPDR=[FSPDR,LNSPDR] #,NAKPDR,TRGPDR]
+	TODO=[FSMean,LNSMean,TRGMean] #,NAKMean]
+	TODODesv=[FSDesv,LNSDesv,TRGDesv] #,NAKDesv]
+	TODOPDR=[FSPDR,LNSPDR,TRGPDR] #,NAKPDR]
 	
-	label=["FS","LNS"] #,"NAK","TRG"]
-	marker=['*','p'] #,'o','D']
+	label=["FS","LNS","TRG"] #,"NAK"]
+	marker=['*','p','o'] #,'D']
 	
 	fig = plt.figure(figsize=(20, 10)) 
 	subplot1 = fig.add_subplot(1, 1, 1)
 	i=0
-	while i<2: #4:
+	while i<3: #4:
 		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	
@@ -235,7 +235,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	figProt = plt.figure(figsize=(20, 10)) 
 	subplot2 = figProt.add_subplot(1, 1, 1)
 	i=0
-	while i<2: #4:
+	while i<3: #4:
 		subplot2.errorbar(XAxis,TODOPDR[i], label=label[i], marker = marker[i])
 		i+=1
 	
