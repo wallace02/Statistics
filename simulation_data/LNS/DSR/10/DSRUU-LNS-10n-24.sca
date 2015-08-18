@@ -1,0 +1,4144 @@
+version 2
+run DSRUU-LNS-10n-24-20150817-20:10:02-10704
+attr configname DSRUU-LNS-10n
+attr datetime 20150817-20:10:02
+attr experiment DSRUU-LNS-10n
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=24
+attr measurement ""
+attr network Prj_Part1_propag.scenarioPRJP1
+attr processid 10704
+attr repetition 24
+attr replication #24
+attr resultdir results
+attr runnumber 24
+attr seedset 24
+
+scalar scenarioPRJP1.radioMedium.propagation 	"Arrival computation count" 	3100725
+scalar scenarioPRJP1.radioMedium 	"transmission count" 	344525
+scalar scenarioPRJP1.radioMedium 	"radio frame send count" 	3100725
+scalar scenarioPRJP1.radioMedium 	"reception computation count" 	3070419
+scalar scenarioPRJP1.radioMedium 	"interference computation count" 	9063525
+scalar scenarioPRJP1.radioMedium 	"reception decision computation count" 	321262
+scalar scenarioPRJP1.radioMedium 	"listening decision computation count" 	5774582
+scalar scenarioPRJP1.radioMedium 	"reception cache hit" 	75.055246713409
+attr unit  %
+scalar scenarioPRJP1.radioMedium 	"interference cache hit" 	50
+attr unit  %
+scalar scenarioPRJP1.radioMedium 	"noise cache hit" 	0
+attr unit  %
+scalar scenarioPRJP1.radioMedium 	"snir cache hit" 	0
+attr unit  %
+scalar scenarioPRJP1.radioMedium 	"reception decision cache hit" 	0
+attr unit  %
+scalar scenarioPRJP1.node[0].app 	"Total sent" 	2607
+scalar scenarioPRJP1.node[0].app 	"Total received" 	411
+scalar scenarioPRJP1.node[0].app 	"Total deleted" 	10
+scalar scenarioPRJP1.node[0].app 	dropPk:count 	10
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[0].app 	dropPk:sum(packetBytes) 	5120
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].app 	outOfOrderPk:count 	51
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[0].app 	outOfOrderPk:sum(packetBytes) 	26112
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].app 	rcvdPk:count 	411
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[0].app 	rcvdPk:sum(packetBytes) 	210432
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[0].app 	endToEndDelay:histogram
+field count 411
+field mean 1.3169372569063
+field stddev 3.4588326065759
+field sum 541.26121258847
+field sqrsum 5617.8514867041
+field min 0.000956177119
+field max 19.463426242868
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-8.8405038092735	0
+bin	-7.6616413174812	0
+bin	-6.4827788256888	0
+bin	-5.3039163338965	0
+bin	-4.1250538421042	0
+bin	-2.9461913503118	0
+bin	-1.7673288585195	0
+bin	-0.58846636672717	312
+bin	0.59039612506517	37
+bin	1.7692586168575	14
+bin	2.9481211086498	11
+bin	4.1269836004422	3
+bin	5.3058460922345	3
+bin	6.4847085840268	5
+bin	7.6635710758192	2
+bin	8.8424335676115	2
+bin	10.021296059404	5
+bin	11.200158551196	5
+bin	12.379021042989	0
+bin	13.557883534781	4
+bin	14.736746026573	1
+bin	15.915608518366	1
+bin	17.094471010158	3
+bin	18.27333350195	2
+bin	19.452195993742	1
+bin	20.631058485535	0
+bin	21.809920977327	0
+bin	22.98878346912	0
+bin	24.167645960912	0
+bin	25.346508452704	0
+bin	26.525370944497	0
+scalar scenarioPRJP1.node[0].app 	sentPk:count 	2607
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[0].app 	sentPk:sum(packetBytes) 	1334784
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[0].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[0].udp 	passedUpPk:count 	472
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[0].udp 	rcvdPk:count 	472
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[0].udp 	rcvdPk:sum(packetBytes) 	245440
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].udp 	sentPk:count 	2607
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[0].udp 	sentPk:sum(packetBytes) 	1355640
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].networkLayer.arp 	failedARPResolution:count 	112
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[0].networkLayer.arp 	completedARPResolution:count 	132
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[0].networkLayer.arp 	initiatedARPResolution:count 	127
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[0].networkLayer.arp 	sentReply:count 	17
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[0].networkLayer.arp 	sentReq:count 	367
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[0].mobility 	startTime 	0.1
+scalar scenarioPRJP1.node[0].mobility 	totalTime 	949.9
+scalar scenarioPRJP1.node[0].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[0].mobility 	minSpeed 	2.4754254030409e-13
+scalar scenarioPRJP1.node[0].mobility 	maxSpeed 	16.797121891473
+scalar scenarioPRJP1.node[0].mobility 	totalDistance 	8936.2209329474
+scalar scenarioPRJP1.node[0].mobility 	totalCO2Emission 	2318.3339994422
+scalar scenarioPRJP1.node[0].wlan.mgmt 	dataQueueLen:max 	11
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[0].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[0].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[0].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of received packets" 	3800
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of collisions" 	2618
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of retry for AC 0" 	19972
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent and received bits" 	1960224
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent packet within AC 0" 	324
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sentWithoutRetry AC 0" 	282
+scalar scenarioPRJP1.node[0].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numGivenUp AC 0" 	3315
+scalar scenarioPRJP1.node[0].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[0].wlan.mac 	rcvdPkFromLL:count 	26100
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[0].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	7121352
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].wlan.mac 	sentDownPk:count 	29173
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[0].wlan.mac 	sentDownPk:sum(packetBytes) 	8335068
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].wlan.mac 	rcvdPkFromHL:count 	5402
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[0].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1387464
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].wlan.mac 	passedUpPk:count 	2926
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[0].wlan.mac 	passedUpPk:sum(packetBytes) 	668904
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[0].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[0].wlan.radio 	transmissionState:count 	116692
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[0].wlan.radio 	receptionState:count 	110926
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[0].wlan.radio 	radioMode:count 	58348
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[0].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[0].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[0].wlan.radio 	packetErrorRate:histogram
+field count 26100
+field mean 0.098073703440277
+field stddev 0.28993771618617
+field sum 2559.7236597912
+field sqrsum 2445.0247640954
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.49995978864578	0
+bin	-0.43329848349301	0
+bin	-0.36663717834024	0
+bin	-0.29997587318747	0
+bin	-0.2333145680347	0
+bin	-0.16665326288193	0
+bin	-0.099991957729157	0
+bin	-0.033330652576386	23082
+bin	0.033330652576386	184
+bin	0.099991957729157	74
+bin	0.16665326288193	65
+bin	0.2333145680347	48
+bin	0.29997587318747	56
+bin	0.36663717834024	40
+bin	0.43329848349301	42
+bin	0.49995978864578	23
+bin	0.56662109379855	30
+bin	0.63328239895133	24
+bin	0.6999437041041	23
+bin	0.76660500925687	38
+bin	0.83326631440964	41
+bin	0.89992761956241	67
+bin	0.96658892471518	2263
+bin	1.033250229868	0
+bin	1.0999115350207	0
+bin	1.1665728401735	0
+bin	1.2332341453263	0
+bin	1.299895450479	0
+bin	1.3665567556318	0
+bin	1.4332180607846	0
+bin	1.4998793659374	0
+statistic scenarioPRJP1.node[0].wlan.radio 	minSNIR:histogram
+field count 26100
+field mean 808.24520051137
+field stddev 3634.5025554022
+field sum 21095199.733347
+field sqrsum 361807674667.85
+field min 0.0029123131788469
+field max 133633.31064229
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-898.00938899828	0
+bin	-777.92782165159	0
+bin	-657.8462543049	0
+bin	-537.76468695821	0
+bin	-417.68311961151	0
+bin	-297.60155226482	0
+bin	-177.51998491813	0
+bin	-57.438417571437	8023
+bin	62.643149775255	6844
+bin	182.72471712195	4766
+bin	302.80628446864	1682
+bin	422.88785181533	881
+bin	542.96941916202	523
+bin	663.05098650872	367
+bin	783.13255385541	258
+bin	903.2141212021	206
+bin	1023.2956885488	166
+bin	1143.3772558955	138
+bin	1263.4588232422	114
+bin	1383.5403905889	103
+bin	1503.6219579356	77
+bin	1623.7035252823	92
+bin	1743.7850926289	63
+bin	1863.8666599756	68
+bin	1983.9482273223	67
+bin	2104.029794669	52
+bin	2224.1113620157	50
+bin	2344.1929293624	50
+bin	2464.2744967091	46
+bin	2584.3560640558	38
+bin	2704.4376314025	1426
+scalar scenarioPRJP1.node[0].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[0].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].lo0.lo 	rcvdPkFromHL:count 	472
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[0].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	245440
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[0].lo0.lo 	passedUpPk:count 	472
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[0].lo0.lo 	passedUpPk:sum(packetBytes) 	245440
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].app 	"Total sent" 	2608
+scalar scenarioPRJP1.node[5].app 	"Total received" 	440
+scalar scenarioPRJP1.node[5].app 	"Total deleted" 	15
+scalar scenarioPRJP1.node[5].app 	dropPk:count 	15
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[5].app 	dropPk:sum(packetBytes) 	7680
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].app 	outOfOrderPk:count 	30
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[5].app 	outOfOrderPk:sum(packetBytes) 	15360
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].app 	rcvdPk:count 	440
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[5].app 	rcvdPk:sum(packetBytes) 	225280
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[5].app 	endToEndDelay:histogram
+field count 440
+field mean 1.702028119461
+field stddev 3.8207497551756
+field sum 748.89237256285
+field sqrsum 7683.2143721968
+field min 0.000956036954
+field max 19.870989293569
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.8185278487905	0
+bin	-8.5092622436127	0
+bin	-7.1999966384349	0
+bin	-5.8907310332571	0
+bin	-4.5814654280793	0
+bin	-3.2721998229015	0
+bin	-1.9629342177237	0
+bin	-0.6536686125459	303
+bin	0.6555969926319	51
+bin	1.9648625978097	20
+bin	3.2741282029875	16
+bin	4.5833938081653	8
+bin	5.8926594133431	6
+bin	7.2019250185209	3
+bin	8.5111906236987	6
+bin	9.8204562288765	4
+bin	11.129721834054	5
+bin	12.438987439232	4
+bin	13.74825304441	2
+bin	15.057518649588	3
+bin	16.366784254765	3
+bin	17.676049859943	2
+bin	18.985315465121	4
+bin	20.294581070299	0
+bin	21.603846675477	0
+bin	22.913112280654	0
+bin	24.222377885832	0
+bin	25.53164349101	0
+bin	26.840909096188	0
+bin	28.150174701366	0
+bin	29.459440306543	0
+scalar scenarioPRJP1.node[5].app 	sentPk:count 	2608
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[5].app 	sentPk:sum(packetBytes) 	1335296
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[5].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[5].udp 	passedUpPk:count 	485
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[5].udp 	rcvdPk:count 	485
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[5].udp 	rcvdPk:sum(packetBytes) 	252200
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].udp 	sentPk:count 	2608
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[5].udp 	sentPk:sum(packetBytes) 	1356160
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].networkLayer.arp 	failedARPResolution:count 	70
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[5].networkLayer.arp 	completedARPResolution:count 	216
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[5].networkLayer.arp 	initiatedARPResolution:count 	89
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[5].networkLayer.arp 	sentReply:count 	16
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[5].networkLayer.arp 	sentReq:count 	249
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[5].mobility 	startTime 	2.5
+scalar scenarioPRJP1.node[5].mobility 	totalTime 	947.5
+scalar scenarioPRJP1.node[5].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[5].mobility 	minSpeed 	2.4754200521802e-13
+scalar scenarioPRJP1.node[5].mobility 	maxSpeed 	18.746064024668
+scalar scenarioPRJP1.node[5].mobility 	totalDistance 	9821.8285358785
+scalar scenarioPRJP1.node[5].mobility 	totalCO2Emission 	2663.1142807717
+scalar scenarioPRJP1.node[5].wlan.mgmt 	dataQueueLen:max 	29
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[5].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[5].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[5].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of received packets" 	5402
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of collisions" 	3270
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of retry for AC 0" 	25338
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent and received bits" 	2939776
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent packet within AC 0" 	835
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sentWithoutRetry AC 0" 	766
+scalar scenarioPRJP1.node[5].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numGivenUp AC 0" 	4206
+scalar scenarioPRJP1.node[5].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[5].wlan.mac 	rcvdPkFromLL:count 	34034
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[5].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	9389832
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].wlan.mac 	sentDownPk:count 	37391
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[5].wlan.mac 	sentDownPk:sum(packetBytes) 	10945104
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].wlan.mac 	rcvdPkFromHL:count 	6651
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[5].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1861620
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].wlan.mac 	passedUpPk:count 	4332
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[5].wlan.mac 	passedUpPk:sum(packetBytes) 	1148136
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[5].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[5].wlan.radio 	transmissionState:count 	149564
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[5].wlan.radio 	receptionState:count 	143559
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[5].wlan.radio 	radioMode:count 	74784
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[5].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[5].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[5].wlan.radio 	packetErrorRate:histogram
+field count 34034
+field mean 0.094160979118172
+field stddev 0.28612121050128
+field sum 3204.6747633079
+field sqrsum 3087.8786712791
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	30353
+bin	0.033333333333333	195
+bin	0.1	98
+bin	0.16666666666667	64
+bin	0.23333333333333	44
+bin	0.3	35
+bin	0.36666666666667	40
+bin	0.43333333333333	44
+bin	0.5	23
+bin	0.56666666666667	29
+bin	0.63333333333333	32
+bin	0.7	34
+bin	0.76666666666667	36
+bin	0.83333333333333	37
+bin	0.9	61
+bin	0.96666666666667	2909
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic scenarioPRJP1.node[5].wlan.radio 	minSNIR:histogram
+field count 34034
+field mean 14915.001907318
+field stddev 73457.317688985
+field sum 507617174.91367
+field sqrsum 1.9121241414031e+14
+field min 0.00017664168269191
+field max 2359159.3305342
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-454.78279573856	0
+bin	-393.8114704094	0
+bin	-332.84014508024	0
+bin	-271.86881975109	0
+bin	-210.89749442193	0
+bin	-149.92616909278	0
+bin	-88.95484376362	0
+bin	-27.983518434464	8333
+bin	32.987806894692	1006
+bin	93.959132223849	4383
+bin	154.930457553	4973
+bin	215.90178288216	2541
+bin	276.87310821132	1531
+bin	337.84443354047	1022
+bin	398.81575886963	732
+bin	459.78708419879	564
+bin	520.75840952794	458
+bin	581.7297348571	334
+bin	642.70106018625	324
+bin	703.67238551541	235
+bin	764.64371084457	230
+bin	825.61503617372	161
+bin	886.58636150288	169
+bin	947.55768683203	156
+bin	1008.5290121612	116
+bin	1069.5003374903	116
+bin	1130.4716628195	127
+bin	1191.4429881487	91
+bin	1252.4143134778	87
+bin	1313.385638807	89
+bin	1374.3569641361	6256
+scalar scenarioPRJP1.node[5].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[5].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].lo0.lo 	rcvdPkFromHL:count 	485
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[5].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	252200
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[5].lo0.lo 	passedUpPk:count 	485
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[5].lo0.lo 	passedUpPk:sum(packetBytes) 	252200
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].app 	"Total sent" 	2604
+scalar scenarioPRJP1.node[1].app 	"Total received" 	478
+scalar scenarioPRJP1.node[1].app 	"Total deleted" 	38
+scalar scenarioPRJP1.node[1].app 	dropPk:count 	38
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[1].app 	dropPk:sum(packetBytes) 	19456
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].app 	outOfOrderPk:count 	56
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[1].app 	outOfOrderPk:sum(packetBytes) 	28672
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].app 	rcvdPk:count 	478
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[1].app 	rcvdPk:sum(packetBytes) 	244736
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[1].app 	endToEndDelay:histogram
+field count 478
+field mean 1.4910743915073
+field stddev 3.7545266244366
+field sum 712.73355914047
+field sqrsum 7786.7550308108
+field min 0.000956715711
+field max 19.824090003412
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.1000507820295	0
+bin	-7.886583052334	0
+bin	-6.6731153226384	0
+bin	-5.4596475929429	0
+bin	-4.2461798632474	0
+bin	-3.0327121335518	0
+bin	-1.8192444038563	0
+bin	-0.60577667416077	357
+bin	0.60769105553477	45
+bin	1.8211587852303	17
+bin	3.0346265149258	5
+bin	4.2480942446214	7
+bin	5.4615619743169	5
+bin	6.6750297040124	7
+bin	7.888497433708	5
+bin	9.1019651634035	5
+bin	10.315432893099	3
+bin	11.528900622795	3
+bin	12.74236835249	2
+bin	13.955836082186	4
+bin	15.169303811881	5
+bin	16.382771541577	1
+bin	17.596239271272	4
+bin	18.809707000968	3
+bin	20.023174730663	0
+bin	21.236642460359	0
+bin	22.450110190054	0
+bin	23.66357791975	0
+bin	24.877045649445	0
+bin	26.090513379141	0
+bin	27.303981108837	0
+scalar scenarioPRJP1.node[1].app 	sentPk:count 	2604
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[1].app 	sentPk:sum(packetBytes) 	1333248
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[1].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[1].udp 	passedUpPk:count 	572
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[1].udp 	rcvdPk:count 	572
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[1].udp 	rcvdPk:sum(packetBytes) 	297440
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].udp 	sentPk:count 	2604
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[1].udp 	sentPk:sum(packetBytes) 	1354080
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].networkLayer.arp 	failedARPResolution:count 	79
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[1].networkLayer.arp 	completedARPResolution:count 	204
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[1].networkLayer.arp 	initiatedARPResolution:count 	91
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[1].networkLayer.arp 	sentReply:count 	22
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[1].networkLayer.arp 	sentReq:count 	254
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[1].mobility 	startTime 	0.1
+scalar scenarioPRJP1.node[1].mobility 	totalTime 	949.9
+scalar scenarioPRJP1.node[1].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[1].mobility 	minSpeed 	2.4755317675493e-13
+scalar scenarioPRJP1.node[1].mobility 	maxSpeed 	20.707557189155
+scalar scenarioPRJP1.node[1].mobility 	totalDistance 	10292.288426485
+scalar scenarioPRJP1.node[1].mobility 	totalCO2Emission 	2887.4623886028
+scalar scenarioPRJP1.node[1].wlan.mgmt 	dataQueueLen:max 	13
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[1].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[1].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[1].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of received packets" 	5414
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of collisions" 	3185
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of retry for AC 0" 	27711
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent and received bits" 	2434048
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent packet within AC 0" 	552
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sentWithoutRetry AC 0" 	488
+scalar scenarioPRJP1.node[1].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numGivenUp AC 0" 	4601
+scalar scenarioPRJP1.node[1].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[1].wlan.mac 	rcvdPkFromLL:count 	30160
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[1].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	8234138
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].wlan.mac 	sentDownPk:count 	39925
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[1].wlan.mac 	sentDownPk:sum(packetBytes) 	11953992
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].wlan.mac 	rcvdPkFromHL:count 	6801
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[1].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1951152
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].wlan.mac 	passedUpPk:count 	4332
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[1].wlan.mac 	passedUpPk:sum(packetBytes) 	1121504
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[1].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[1].wlan.radio 	transmissionState:count 	159700
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[1].wlan.radio 	receptionState:count 	140681
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[1].wlan.radio 	radioMode:count 	79852
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[1].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[1].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[1].wlan.radio 	packetErrorRate:histogram
+field count 30160
+field mean 0.10244657359776
+field stddev 0.29631067045856
+field sum 3089.7886597083
+field sqrsum 2964.4988662913
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	26530
+bin	0.033333333333333	233
+bin	0.1	93
+bin	0.16666666666667	75
+bin	0.23333333333333	63
+bin	0.3	46
+bin	0.36666666666667	42
+bin	0.43333333333333	41
+bin	0.5	33
+bin	0.56666666666667	31
+bin	0.63333333333333	21
+bin	0.7	32
+bin	0.76666666666667	38
+bin	0.83333333333333	39
+bin	0.9	64
+bin	0.96666666666667	2779
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic scenarioPRJP1.node[1].wlan.radio 	minSNIR:histogram
+field count 30160
+field mean 4025.5850472818
+field stddev 33162.036964207
+field sum 121411645.02602
+field sqrsum 33655229361849
+field min 0.00039036583393861
+field max 1821627.6851982
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-1119.1900437691	0
+bin	-969.76417480818	0
+bin	-820.33830584726	0
+bin	-670.91243688633	0
+bin	-521.48656792541	0
+bin	-372.06069896449	0
+bin	-222.63483000356	0
+bin	-73.208961042642	8974
+bin	76.216907918281	10825
+bin	225.6427768792	3980
+bin	375.06864584013	1380
+bin	524.49451480105	735
+bin	673.92038376197	431
+bin	823.3462527229	302
+bin	972.77212168382	223
+bin	1122.1979906447	194
+bin	1271.6238596057	154
+bin	1421.0497285666	118
+bin	1570.4755975275	109
+bin	1719.9014664884	89
+bin	1869.3273354494	86
+bin	2018.7532044103	77
+bin	2168.1790733712	69
+bin	2317.6049423321	63
+bin	2467.030811293	45
+bin	2616.456680254	54
+bin	2765.8825492149	43
+bin	2915.3084181758	38
+bin	3064.7342871367	45
+bin	3214.1601560977	39
+bin	3363.5860250586	2087
+scalar scenarioPRJP1.node[1].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[1].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].lo0.lo 	rcvdPkFromHL:count 	572
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[1].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	297440
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[1].lo0.lo 	passedUpPk:count 	572
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[1].lo0.lo 	passedUpPk:sum(packetBytes) 	297440
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].app 	"Total sent" 	2627
+scalar scenarioPRJP1.node[8].app 	"Total received" 	465
+scalar scenarioPRJP1.node[8].app 	"Total deleted" 	18
+scalar scenarioPRJP1.node[8].app 	dropPk:count 	18
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[8].app 	dropPk:sum(packetBytes) 	9216
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].app 	outOfOrderPk:count 	60
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[8].app 	outOfOrderPk:sum(packetBytes) 	30720
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].app 	rcvdPk:count 	465
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[8].app 	rcvdPk:sum(packetBytes) 	238080
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[8].app 	endToEndDelay:histogram
+field count 465
+field mean 1.1527799159669
+field stddev 3.4834840945434
+field sum 536.04266092461
+field sqrsum 6248.4221203539
+field min 0.000956022685
+field max 19.80017084052
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.8986513862325	0
+bin	-8.5787037317102	0
+bin	-7.2587560771878	0
+bin	-5.9388084226655	0
+bin	-4.6188607681432	0
+bin	-3.2989131136208	0
+bin	-1.9789654590985	0
+bin	-0.65901780457617	376
+bin	0.66092984994617	39
+bin	1.9808775044685	9
+bin	3.3008251589908	7
+bin	4.6207728135132	2
+bin	5.9407204680355	3
+bin	7.2606681225578	6
+bin	8.5806157770802	1
+bin	9.9005634316025	3
+bin	11.220511086125	1
+bin	12.540458740647	3
+bin	13.86040639517	4
+bin	15.180354049692	3
+bin	16.500301704214	0
+bin	17.820249358737	6
+bin	19.140197013259	2
+bin	20.460144667781	0
+bin	21.780092322304	0
+bin	23.100039976826	0
+bin	24.419987631348	0
+bin	25.739935285871	0
+bin	27.059882940393	0
+bin	28.379830594915	0
+bin	29.699778249438	0
+scalar scenarioPRJP1.node[8].app 	sentPk:count 	2627
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[8].app 	sentPk:sum(packetBytes) 	1345024
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[8].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[8].udp 	passedUpPk:count 	543
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[8].udp 	rcvdPk:count 	543
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[8].udp 	rcvdPk:sum(packetBytes) 	282360
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].udp 	sentPk:count 	2627
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[8].udp 	sentPk:sum(packetBytes) 	1366040
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].networkLayer.arp 	failedARPResolution:count 	74
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[8].networkLayer.arp 	completedARPResolution:count 	240
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[8].networkLayer.arp 	initiatedARPResolution:count 	92
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[8].networkLayer.arp 	sentReply:count 	18
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[8].networkLayer.arp 	sentReq:count 	257
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[8].mobility 	startTime 	2.6
+scalar scenarioPRJP1.node[8].mobility 	totalTime 	947.4
+scalar scenarioPRJP1.node[8].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[8].mobility 	minSpeed 	2.4755137782395e-13
+scalar scenarioPRJP1.node[8].mobility 	maxSpeed 	12.073561197274
+scalar scenarioPRJP1.node[8].mobility 	totalDistance 	6333.6110703829
+scalar scenarioPRJP1.node[8].mobility 	totalCO2Emission 	1834.4793299313
+scalar scenarioPRJP1.node[8].wlan.mgmt 	dataQueueLen:max 	8
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[8].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[8].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[8].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of received packets" 	5401
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of collisions" 	2832
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of retry for AC 0" 	21090
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent and received bits" 	3676960
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent packet within AC 0" 	939
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sentWithoutRetry AC 0" 	844
+scalar scenarioPRJP1.node[8].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numGivenUp AC 0" 	3491
+scalar scenarioPRJP1.node[8].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[8].wlan.mac 	rcvdPkFromLL:count 	37957
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[8].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	10462158
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].wlan.mac 	sentDownPk:count 	32721
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[8].wlan.mac 	sentDownPk:sum(packetBytes) 	9594358
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].wlan.mac 	rcvdPkFromHL:count 	6230
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[8].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1744392
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].wlan.mac 	passedUpPk:count 	4532
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[8].wlan.mac 	passedUpPk:sum(packetBytes) 	1038620
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[8].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[8].wlan.radio 	transmissionState:count 	130884
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[8].wlan.radio 	receptionState:count 	141992
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[8].wlan.radio 	radioMode:count 	65444
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[8].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[8].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[8].wlan.radio 	packetErrorRate:histogram
+field count 37957
+field mean 0.073452235482395
+field stddev 0.25521274890617
+field sum 2788.0265022053
+field sqrsum 2676.9956968555
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	34708
+bin	0.033333333333333	192
+bin	0.1	88
+bin	0.16666666666667	68
+bin	0.23333333333333	40
+bin	0.3	44
+bin	0.36666666666667	36
+bin	0.43333333333333	25
+bin	0.5	30
+bin	0.56666666666667	33
+bin	0.63333333333333	24
+bin	0.7	36
+bin	0.76666666666667	39
+bin	0.83333333333333	35
+bin	0.9	46
+bin	0.96666666666667	2513
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic scenarioPRJP1.node[8].wlan.radio 	minSNIR:histogram
+field count 37957
+field mean 4979.5053926633
+field stddev 30324.319767994
+field sum 189007086.18932
+field sqrsum 35844147009557
+field min 0.00023226749393928
+field max 976886.68935952
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-1151.2490711089	0
+bin	-997.70460453435	0
+bin	-844.16013795977	0
+bin	-690.61567138519	0
+bin	-537.0712048106	0
+bin	-383.52673823602	0
+bin	-229.98227166144	0
+bin	-76.437805086858	9827
+bin	77.106661487724	11133
+bin	230.65112806231	5055
+bin	384.19559463689	2111
+bin	537.74006121147	1212
+bin	691.28452778605	838
+bin	844.82899436063	566
+bin	998.37346093522	424
+bin	1151.9179275098	340
+bin	1305.4623940844	301
+bin	1459.006860659	245
+bin	1612.5513272335	233
+bin	1766.0957938081	190
+bin	1919.6402603827	162
+bin	2073.1847269573	134
+bin	2226.7291935319	132
+bin	2380.2736601065	114
+bin	2533.818126681	110
+bin	2687.3625932556	96
+bin	2840.9070598302	74
+bin	2994.4515264048	80
+bin	3147.9959929794	71
+bin	3301.5404595539	77
+bin	3455.0849261285	4432
+scalar scenarioPRJP1.node[8].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[8].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].lo0.lo 	rcvdPkFromHL:count 	543
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[8].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	282360
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[8].lo0.lo 	passedUpPk:count 	543
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[8].lo0.lo 	passedUpPk:sum(packetBytes) 	282360
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].app 	"Total sent" 	2607
+scalar scenarioPRJP1.node[2].app 	"Total received" 	379
+scalar scenarioPRJP1.node[2].app 	"Total deleted" 	33
+scalar scenarioPRJP1.node[2].app 	dropPk:count 	33
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[2].app 	dropPk:sum(packetBytes) 	16896
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].app 	outOfOrderPk:count 	31
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[2].app 	outOfOrderPk:sum(packetBytes) 	15872
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].app 	rcvdPk:count 	379
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[2].app 	rcvdPk:sum(packetBytes) 	194048
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[2].app 	endToEndDelay:histogram
+field count 379
+field mean 1.2774093085883
+field stddev 3.5972603445473
+field sum 484.13812795497
+field sqrsum 5509.8691421713
+field min 0.000956178988
+field max 19.131572766435
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.5643505959885	0
+bin	-8.2889762243252	0
+bin	-7.013601852662	0
+bin	-5.7382274809987	0
+bin	-4.4628531093354	0
+bin	-3.1874787376722	0
+bin	-1.9121043660089	0
+bin	-0.63672999434563	297
+bin	0.63864437731763	34
+bin	1.9140187489809	11
+bin	3.1893931206442	5
+bin	4.4647674923074	5
+bin	5.7401418639707	1
+bin	7.015516235634	2
+bin	8.2908906072972	2
+bin	9.5662649789605	3
+bin	10.841639350624	4
+bin	12.117013722287	2
+bin	13.39238809395	1
+bin	14.667762465614	1
+bin	15.943136837277	5
+bin	17.21851120894	5
+bin	18.493885580603	1
+bin	19.769259952267	0
+bin	21.04463432393	0
+bin	22.320008695593	0
+bin	23.595383067256	0
+bin	24.87075743892	0
+bin	26.146131810583	0
+bin	27.421506182246	0
+bin	28.69688055391	0
+scalar scenarioPRJP1.node[2].app 	sentPk:count 	2607
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[2].app 	sentPk:sum(packetBytes) 	1334784
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[2].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[2].udp 	passedUpPk:count 	443
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[2].udp 	rcvdPk:count 	443
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[2].udp 	rcvdPk:sum(packetBytes) 	230360
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].udp 	sentPk:count 	2607
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[2].udp 	sentPk:sum(packetBytes) 	1355640
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].networkLayer.arp 	failedARPResolution:count 	65
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[2].networkLayer.arp 	completedARPResolution:count 	266
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[2].networkLayer.arp 	initiatedARPResolution:count 	88
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[2].networkLayer.arp 	sentReply:count 	14
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[2].networkLayer.arp 	sentReq:count 	234
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[2].mobility 	startTime 	0.1
+scalar scenarioPRJP1.node[2].mobility 	totalTime 	949.9
+scalar scenarioPRJP1.node[2].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[2].mobility 	minSpeed 	2.4764096853575e-13
+scalar scenarioPRJP1.node[2].mobility 	maxSpeed 	14.920140153671
+scalar scenarioPRJP1.node[2].mobility 	totalDistance 	9295.1896105168
+scalar scenarioPRJP1.node[2].mobility 	totalCO2Emission 	2269.0840798784
+scalar scenarioPRJP1.node[2].wlan.mgmt 	dataQueueLen:max 	13
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[2].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[2].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[2].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of received packets" 	5014
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of collisions" 	3094
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of retry for AC 0" 	23645
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent and received bits" 	2838880
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent packet within AC 0" 	731
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sentWithoutRetry AC 0" 	668
+scalar scenarioPRJP1.node[2].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numGivenUp AC 0" 	3922
+scalar scenarioPRJP1.node[2].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[2].wlan.mac 	rcvdPkFromLL:count 	31141
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[2].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	8394902
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].wlan.mac 	sentDownPk:count 	34967
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[2].wlan.mac 	sentDownPk:sum(packetBytes) 	10462024
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].wlan.mac 	rcvdPkFromHL:count 	6308
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[2].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1781476
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].wlan.mac 	passedUpPk:count 	4201
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[2].wlan.mac 	passedUpPk:sum(packetBytes) 	1064360
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[2].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[2].wlan.radio 	transmissionState:count 	139868
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[2].wlan.radio 	receptionState:count 	132846
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[2].wlan.radio 	radioMode:count 	69936
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[2].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[2].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[2].wlan.radio 	packetErrorRate:histogram
+field count 31141
+field mean 0.096834725683926
+field stddev 0.28947383711442
+field sum 3015.5301925231
+field sqrsum 2901.387526903
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	27669
+bin	0.033333333333333	112
+bin	0.066666666666667	66
+bin	0.1	51
+bin	0.13333333333333	48
+bin	0.16666666666667	25
+bin	0.2	28
+bin	0.23333333333333	23
+bin	0.26666666666667	19
+bin	0.3	22
+bin	0.33333333333333	15
+bin	0.36666666666667	23
+bin	0.4	22
+bin	0.43333333333333	19
+bin	0.46666666666667	19
+bin	0.5	2980
+statistic scenarioPRJP1.node[2].wlan.radio 	minSNIR:histogram
+field count 31141
+field mean 5260.3181574146
+field stddev 36502.562495286
+field sum 163811567.74005
+field sqrsum 42353791284189
+field min 0.00025671640656358
+field max 1290354.8192317
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-21238.573210307	0
+bin	-18404.839651266	0
+bin	-15571.106092226	0
+bin	-12737.372533186	0
+bin	-9903.6389741454	0
+bin	-7069.905415105	0
+bin	-4236.1718560647	0
+bin	-1402.4382970244	26442
+bin	1431.2952620159	1534
+bin	4265.0288210563	665
+bin	7098.7623800966	522
+bin	9932.4959391369	369
+bin	12766.229498177	275
+bin	15599.963057218	177
+bin	18433.696616258	142
+bin	21267.430175298	87
+bin	24101.163734339	71
+bin	26934.897293379	82
+bin	29768.630852419	45
+bin	32602.36441146	38
+bin	35436.0979705	40
+bin	38269.83152954	27
+bin	41103.565088581	26
+bin	43937.298647621	17
+bin	46771.032206661	18
+bin	49604.765765701	13
+bin	52438.499324742	16
+bin	55272.232883782	14
+bin	58105.966442822	11
+bin	60939.700001863	7
+bin	63773.433560903	503
+scalar scenarioPRJP1.node[2].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[2].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].lo0.lo 	rcvdPkFromHL:count 	443
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[2].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	230360
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[2].lo0.lo 	passedUpPk:count 	443
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[2].lo0.lo 	passedUpPk:sum(packetBytes) 	230360
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].app 	"Total sent" 	2609
+scalar scenarioPRJP1.node[9].app 	"Total received" 	455
+scalar scenarioPRJP1.node[9].app 	"Total deleted" 	24
+scalar scenarioPRJP1.node[9].app 	dropPk:count 	24
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[9].app 	dropPk:sum(packetBytes) 	12288
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].app 	outOfOrderPk:count 	69
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[9].app 	outOfOrderPk:sum(packetBytes) 	35328
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].app 	rcvdPk:count 	455
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[9].app 	rcvdPk:sum(packetBytes) 	232960
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[9].app 	endToEndDelay:histogram
+field count 455
+field mean 1.2994510631721
+field stddev 3.63014619169
+field sum 591.2502337433
+field sqrsum 6751.0952081993
+field min 0.000956011007
+field max 19.778063456021
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-8.953040687894	0
+bin	-7.7591744613739	0
+bin	-6.5653082348537	0
+bin	-5.3714420083336	0
+bin	-4.1775757818135	0
+bin	-2.9837095552933	0
+bin	-1.7898433287732	0
+bin	-0.59597710225307	357
+bin	0.59788912426706	39
+bin	1.7917553507872	12
+bin	2.9856215773073	4
+bin	4.1794878038275	4
+bin	5.3733540303476	2
+bin	6.5672202568677	7
+bin	7.7610864833879	2
+bin	8.954952709908	4
+bin	10.148818936428	4
+bin	11.342685162948	3
+bin	12.536551389468	3
+bin	13.730417615989	1
+bin	14.924283842509	4
+bin	16.118150069029	1
+bin	17.312016295549	4
+bin	18.505882522069	3
+bin	19.699748748589	1
+bin	20.893614975109	0
+bin	22.087481201629	0
+bin	23.28134742815	0
+bin	24.47521365467	0
+bin	25.66907988119	0
+bin	26.86294610771	0
+scalar scenarioPRJP1.node[9].app 	sentPk:count 	2609
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[9].app 	sentPk:sum(packetBytes) 	1335808
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[9].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[9].udp 	passedUpPk:count 	548
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[9].udp 	rcvdPk:count 	548
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[9].udp 	rcvdPk:sum(packetBytes) 	284960
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].udp 	sentPk:count 	2609
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[9].udp 	sentPk:sum(packetBytes) 	1356680
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].networkLayer.arp 	failedARPResolution:count 	87
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[9].networkLayer.arp 	completedARPResolution:count 	199
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[9].networkLayer.arp 	initiatedARPResolution:count 	103
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[9].networkLayer.arp 	sentReply:count 	17
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[9].networkLayer.arp 	sentReq:count 	293
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[9].mobility 	startTime 	2.6
+scalar scenarioPRJP1.node[9].mobility 	totalTime 	947.4
+scalar scenarioPRJP1.node[9].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[9].mobility 	minSpeed 	2.4755120061969e-13
+scalar scenarioPRJP1.node[9].mobility 	maxSpeed 	16.903203380569
+scalar scenarioPRJP1.node[9].mobility 	totalDistance 	9371.2458430984
+scalar scenarioPRJP1.node[9].mobility 	totalCO2Emission 	2444.5541802254
+scalar scenarioPRJP1.node[9].wlan.mgmt 	dataQueueLen:max 	14
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[9].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[9].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[9].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of received packets" 	5497
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of collisions" 	3335
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of retry for AC 0" 	23272
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent and received bits" 	3802272
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent packet within AC 0" 	1011
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sentWithoutRetry AC 0" 	945
+scalar scenarioPRJP1.node[9].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numGivenUp AC 0" 	3860
+scalar scenarioPRJP1.node[9].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[9].wlan.mac 	rcvdPkFromLL:count 	40751
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[9].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	11077430
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].wlan.mac 	sentDownPk:count 	35537
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[9].wlan.mac 	sentDownPk:sum(packetBytes) 	9978754
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].wlan.mac 	rcvdPkFromHL:count 	6768
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[9].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1814832
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].wlan.mac 	passedUpPk:count 	4938
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[9].wlan.mac 	passedUpPk:sum(packetBytes) 	1149572
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[9].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[9].wlan.radio 	transmissionState:count 	142148
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[9].wlan.radio 	receptionState:count 	153337
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[9].wlan.radio 	radioMode:count 	71076
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[9].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[9].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[9].wlan.radio 	packetErrorRate:histogram
+field count 40751
+field mean 0.07997382357084
+field stddev 0.26598912881494
+field sum 3259.0132843353
+field sqrsum 3143.7070818116
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	37019
+bin	0.033333333333333	118
+bin	0.066666666666667	74
+bin	0.1	39
+bin	0.13333333333333	48
+bin	0.16666666666667	43
+bin	0.2	27
+bin	0.23333333333333	30
+bin	0.26666666666667	24
+bin	0.3	26
+bin	0.33333333333333	15
+bin	0.36666666666667	19
+bin	0.4	18
+bin	0.43333333333333	18
+bin	0.46666666666667	17
+bin	0.5	3216
+statistic scenarioPRJP1.node[9].wlan.radio 	minSNIR:histogram
+field count 40751
+field mean 13098.366747529
+field stddev 70837.976582947
+field sum 533771543.32856
+field sqrsum 2.1147580668333e+14
+field min 0.00021736433941287
+field max 4602818.4854458
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-16361.360564292	0
+bin	-14169.7171611	0
+bin	-11978.073757909	0
+bin	-9786.4303547179	0
+bin	-7594.7869515267	0
+bin	-5403.1435483355	0
+bin	-3211.5001451442	0
+bin	-1019.856741953	30438
+bin	1171.7866612382	2444
+bin	3363.4300644295	1069
+bin	5555.0734676207	716
+bin	7746.7168708119	552
+bin	9938.3602740031	383
+bin	12130.003677194	351
+bin	14321.647080386	286
+bin	16513.290483577	239
+bin	18704.933886768	198
+bin	20896.577289959	195
+bin	23088.22069315	174
+bin	25279.864096342	147
+bin	27471.507499533	151
+bin	29663.150902724	133
+bin	31854.794305915	125
+bin	34046.437709107	102
+bin	36238.081112298	122
+bin	38429.724515489	99
+bin	40621.36791868	85
+bin	42813.011321872	95
+bin	45004.654725063	87
+bin	47196.298128254	73
+bin	49387.941531445	2487
+scalar scenarioPRJP1.node[9].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[9].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].lo0.lo 	rcvdPkFromHL:count 	548
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[9].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	284960
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[9].lo0.lo 	passedUpPk:count 	548
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[9].lo0.lo 	passedUpPk:sum(packetBytes) 	284960
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].app 	"Total sent" 	2611
+scalar scenarioPRJP1.node[3].app 	"Total received" 	410
+scalar scenarioPRJP1.node[3].app 	"Total deleted" 	19
+scalar scenarioPRJP1.node[3].app 	dropPk:count 	19
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[3].app 	dropPk:sum(packetBytes) 	9728
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].app 	outOfOrderPk:count 	40
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[3].app 	outOfOrderPk:sum(packetBytes) 	20480
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].app 	rcvdPk:count 	410
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[3].app 	rcvdPk:sum(packetBytes) 	209920
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[3].app 	endToEndDelay:histogram
+field count 410
+field mean 1.1730028716996
+field stddev 3.0853946541938
+field sum 480.93117739682
+field sqrsum 4457.6746625766
+field min 0.000956658944
+field max 18.661330543884
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.3292299590025	0
+bin	-8.0852050477631	0
+bin	-6.8411801365237	0
+bin	-5.5971552252843	0
+bin	-4.3531303140449	0
+bin	-3.1091054028055	0
+bin	-1.8650804915661	0
+bin	-0.6210555803267	309
+bin	0.6229693309127	47
+bin	1.8669942421521	7
+bin	3.1110191533915	10
+bin	4.3550440646309	11
+bin	5.5990689758703	5
+bin	6.8430938871097	3
+bin	8.0871187983491	4
+bin	9.3311437095885	3
+bin	10.575168620828	0
+bin	11.819193532067	0
+bin	13.063218443307	3
+bin	14.307243354546	1
+bin	15.551268265785	2
+bin	16.795293177025	2
+bin	18.039318088264	3
+bin	19.283342999504	0
+bin	20.527367910743	0
+bin	21.771392821982	0
+bin	23.015417733222	0
+bin	24.259442644461	0
+bin	25.503467555701	0
+bin	26.74749246694	0
+bin	27.991517378179	0
+scalar scenarioPRJP1.node[3].app 	sentPk:count 	2611
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[3].app 	sentPk:sum(packetBytes) 	1336832
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[3].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[3].udp 	passedUpPk:count 	469
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[3].udp 	rcvdPk:count 	469
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[3].udp 	rcvdPk:sum(packetBytes) 	243880
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].udp 	sentPk:count 	2611
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[3].udp 	sentPk:sum(packetBytes) 	1357720
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].networkLayer.arp 	failedARPResolution:count 	83
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[3].networkLayer.arp 	completedARPResolution:count 	201
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[3].networkLayer.arp 	initiatedARPResolution:count 	99
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[3].networkLayer.arp 	sentReply:count 	30
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[3].networkLayer.arp 	sentReq:count 	276
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[3].mobility 	startTime 	0.1
+scalar scenarioPRJP1.node[3].mobility 	totalTime 	949.9
+scalar scenarioPRJP1.node[3].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[3].mobility 	minSpeed 	2.4755233898044e-13
+scalar scenarioPRJP1.node[3].mobility 	maxSpeed 	19.326818354328
+scalar scenarioPRJP1.node[3].mobility 	totalDistance 	9513.3002517255
+scalar scenarioPRJP1.node[3].mobility 	totalCO2Emission 	2569.5371395639
+scalar scenarioPRJP1.node[3].wlan.mgmt 	dataQueueLen:max 	11
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[3].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[3].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[3].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of received packets" 	4433
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of collisions" 	2474
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of retry for AC 0" 	23016
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent and received bits" 	2801408
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent packet within AC 0" 	660
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sentWithoutRetry AC 0" 	617
+scalar scenarioPRJP1.node[3].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numGivenUp AC 0" 	3826
+scalar scenarioPRJP1.node[3].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[3].wlan.mac 	rcvdPkFromLL:count 	27088
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[3].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	7292268
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].wlan.mac 	sentDownPk:count 	33758
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[3].wlan.mac 	sentDownPk:sum(packetBytes) 	9802998
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].wlan.mac 	rcvdPkFromHL:count 	6309
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[3].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1688188
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].wlan.mac 	passedUpPk:count 	4014
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[3].wlan.mac 	passedUpPk:sum(packetBytes) 	948432
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[3].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[3].wlan.radio 	transmissionState:count 	135032
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[3].wlan.radio 	receptionState:count 	122132
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[3].wlan.radio 	radioMode:count 	67518
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[3].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[3].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[3].wlan.radio 	packetErrorRate:histogram
+field count 27088
+field mean 0.088772835498601
+field stddev 0.27832645060804
+field sum 2404.6785679861
+field sqrsum 2311.7811972011
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.43333333333333	0
+bin	-0.36666666666667	0
+bin	-0.3	0
+bin	-0.23333333333333	0
+bin	-0.16666666666667	0
+bin	-0.1	0
+bin	-0.033333333333333	24315
+bin	0.033333333333333	138
+bin	0.1	79
+bin	0.16666666666667	55
+bin	0.23333333333333	35
+bin	0.3	31
+bin	0.36666666666667	36
+bin	0.43333333333333	16
+bin	0.5	28
+bin	0.56666666666667	31
+bin	0.63333333333333	24
+bin	0.7	19
+bin	0.76666666666667	27
+bin	0.83333333333333	41
+bin	0.9	60
+bin	0.96666666666667	2153
+bin	1.0333333333333	0
+bin	1.1	0
+bin	1.1666666666667	0
+bin	1.2333333333333	0
+bin	1.3	0
+bin	1.3666666666667	0
+bin	1.4333333333333	0
+bin	1.5	0
+statistic scenarioPRJP1.node[3].wlan.radio 	minSNIR:histogram
+field count 27088
+field mean 9722.2732264962
+field stddev 55524.498876452
+field sum 263356937.15933
+field sqrsum 86068835825012
+field min 0.00026367327865331
+field max 2268336.7273445
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-1157.026850279	0
+bin	-1002.4467851163	0
+bin	-847.86671995359	0
+bin	-693.28665479086	0
+bin	-538.70658962813	0
+bin	-384.1265244654	0
+bin	-229.54645930267	0
+bin	-74.966394139945	6841
+bin	79.613671022784	9464
+bin	234.19373618551	3127
+bin	388.77380134824	1068
+bin	543.35386651097	565
+bin	697.9339316737	356
+bin	852.51399683643	253
+bin	1007.0940619992	187
+bin	1161.6741271619	137
+bin	1316.2541923246	109
+bin	1470.8342574873	113
+bin	1625.4143226501	100
+bin	1779.9943878128	84
+bin	1934.5744529755	66
+bin	2089.1545181383	67
+bin	2243.734583301	66
+bin	2398.3146484637	51
+bin	2552.8947136265	64
+bin	2707.4747787892	62
+bin	2862.0548439519	56
+bin	3016.6349091146	44
+bin	3171.2149742774	36
+bin	3325.7950394401	41
+bin	3480.3751046028	4131
+scalar scenarioPRJP1.node[3].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[3].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].lo0.lo 	rcvdPkFromHL:count 	469
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[3].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	243880
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[3].lo0.lo 	passedUpPk:count 	469
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[3].lo0.lo 	passedUpPk:sum(packetBytes) 	243880
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].app 	"Total sent" 	2610
+scalar scenarioPRJP1.node[6].app 	"Total received" 	427
+scalar scenarioPRJP1.node[6].app 	"Total deleted" 	24
+scalar scenarioPRJP1.node[6].app 	dropPk:count 	24
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[6].app 	dropPk:sum(packetBytes) 	12288
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].app 	outOfOrderPk:count 	56
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[6].app 	outOfOrderPk:sum(packetBytes) 	28672
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].app 	rcvdPk:count 	427
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[6].app 	rcvdPk:sum(packetBytes) 	218624
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[6].app 	endToEndDelay:histogram
+field count 427
+field mean 1.578147785648
+field stddev 3.9731414757622
+field sum 673.86910447172
+field sqrsum 7788.2384924544
+field min 0.000956214003
+field max 19.662729314487
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.311835942214	0
+bin	-8.0701302129935	0
+bin	-6.8284244837729	0
+bin	-5.5867187545524	0
+bin	-4.3450130253319	0
+bin	-3.1033072961113	0
+bin	-1.8616015668908	0
+bin	-0.61989583767027	318
+bin	0.62180989155027	42
+bin	1.8635156207708	9
+bin	3.1052213499913	7
+bin	4.3469270792119	9
+bin	5.5886328084324	7
+bin	6.8303385376529	6
+bin	8.0720442668735	2
+bin	9.313749996094	0
+bin	10.555455725315	5
+bin	11.797161454535	3
+bin	13.038867183756	2
+bin	14.280572912976	3
+bin	15.522278642197	3
+bin	16.763984371417	4
+bin	18.005690100638	4
+bin	19.247395829858	3
+bin	20.489101559079	0
+bin	21.730807288299	0
+bin	22.97251301752	0
+bin	24.21421874674	0
+bin	25.455924475961	0
+bin	26.697630205181	0
+bin	27.939335934402	0
+scalar scenarioPRJP1.node[6].app 	sentPk:count 	2610
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[6].app 	sentPk:sum(packetBytes) 	1336320
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[6].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[6].udp 	passedUpPk:count 	507
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[6].udp 	rcvdPk:count 	507
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[6].udp 	rcvdPk:sum(packetBytes) 	263640
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].udp 	sentPk:count 	2610
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[6].udp 	sentPk:sum(packetBytes) 	1357200
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].networkLayer.arp 	failedARPResolution:count 	140
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[6].networkLayer.arp 	completedARPResolution:count 	116
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[6].networkLayer.arp 	initiatedARPResolution:count 	164
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[6].networkLayer.arp 	sentReply:count 	5
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[6].networkLayer.arp 	sentReq:count 	466
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[6].mobility 	startTime 	2.5
+scalar scenarioPRJP1.node[6].mobility 	totalTime 	947.5
+scalar scenarioPRJP1.node[6].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[6].mobility 	minSpeed 	2.4754308050756e-13
+scalar scenarioPRJP1.node[6].mobility 	maxSpeed 	17.909147499177
+scalar scenarioPRJP1.node[6].mobility 	totalDistance 	9958.7376359586
+scalar scenarioPRJP1.node[6].mobility 	totalCO2Emission 	2540.1905446537
+scalar scenarioPRJP1.node[6].wlan.mgmt 	dataQueueLen:max 	7
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[6].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[6].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[6].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of received packets" 	4314
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of collisions" 	2818
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of retry for AC 0" 	22114
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent and received bits" 	1708064
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent packet within AC 0" 	251
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sentWithoutRetry AC 0" 	214
+scalar scenarioPRJP1.node[6].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numGivenUp AC 0" 	3677
+scalar scenarioPRJP1.node[6].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[6].wlan.mac 	rcvdPkFromLL:count 	24013
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[6].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	6727554
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].wlan.mac 	sentDownPk:count 	32133
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[6].wlan.mac 	sentDownPk:sum(packetBytes) 	9265268
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].wlan.mac 	rcvdPkFromHL:count 	5705
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[6].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1494180
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].wlan.mac 	passedUpPk:count 	3242
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[6].wlan.mac 	passedUpPk:sum(packetBytes) 	838812
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[6].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[6].wlan.radio 	transmissionState:count 	128532
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[6].wlan.radio 	receptionState:count 	112673
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[6].wlan.radio 	radioMode:count 	64268
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[6].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[6].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[6].wlan.radio 	packetErrorRate:histogram
+field count 24013
+field mean 0.1150379647597
+field stddev 0.31219121489502
+field sum 2762.4066477746
+field sqrsum 2658.0717106376
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.084216477443516	0
+bin	-0.072987613784381	0
+bin	-0.061758750125245	0
+bin	-0.05052988646611	0
+bin	-0.039301022806974	0
+bin	-0.028072159147839	0
+bin	-0.016843295488703	0
+bin	-0.0056144318295678	20557
+bin	0.0056144318295678	167
+bin	0.016843295488703	83
+bin	0.028072159147839	57
+bin	0.039301022806974	30
+bin	0.05052988646611	31
+bin	0.061758750125245	23
+bin	0.072987613784381	24
+bin	0.084216477443516	21
+bin	0.095445341102652	21
+bin	0.10667420476179	17
+bin	0.11790306842092	15
+bin	0.12913193208006	13
+bin	0.14036079573919	12
+bin	0.15158965939833	11
+bin	0.16281852305747	10
+bin	0.1740473867166	11
+bin	0.18527625037574	12
+bin	0.19650511403487	5
+bin	0.20773397769401	7
+bin	0.21896284135314	10
+bin	0.23019170501228	8
+bin	0.24142056867141	10
+bin	0.25264943233055	2858
+statistic scenarioPRJP1.node[6].wlan.radio 	minSNIR:histogram
+field count 24013
+field mean 882.16836035741
+field stddev 5785.0453747268
+field sum 21183508.837263
+field sqrsum 822291021960.98
+field min 0.0027822389969298
+field max 269979.00257453
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-1101.3727901646	0
+bin	-954.21074728601	0
+bin	-807.04870440744	0
+bin	-659.88666152887	0
+bin	-512.72461865029	0
+bin	-365.56257577172	0
+bin	-218.40053289314	0
+bin	-71.238490014571	7632
+bin	75.923552864002	9620
+bin	223.08559574258	3280
+bin	370.24763862115	976
+bin	517.40968149972	432
+bin	664.5717243783	263
+bin	811.73376725687	184
+bin	958.89581013544	133
+bin	1106.057853014	97
+bin	1253.2198958926	76
+bin	1400.3819387712	71
+bin	1547.5439816497	60
+bin	1694.7060245283	37
+bin	1841.8680674069	40
+bin	1989.0301102855	42
+bin	2136.192153164	39
+bin	2283.3541960426	27
+bin	2430.5162389212	25
+bin	2577.6782817998	36
+bin	2724.8403246783	21
+bin	2872.0023675569	21
+bin	3019.1644104355	16
+bin	3166.326453314	22
+bin	3313.4884961926	863
+scalar scenarioPRJP1.node[6].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[6].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].lo0.lo 	rcvdPkFromHL:count 	507
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[6].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	263640
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[6].lo0.lo 	passedUpPk:count 	507
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[6].lo0.lo 	passedUpPk:sum(packetBytes) 	263640
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].app 	"Total sent" 	2613
+scalar scenarioPRJP1.node[4].app 	"Total received" 	359
+scalar scenarioPRJP1.node[4].app 	"Total deleted" 	21
+scalar scenarioPRJP1.node[4].app 	dropPk:count 	21
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[4].app 	dropPk:sum(packetBytes) 	10752
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].app 	outOfOrderPk:count 	35
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[4].app 	outOfOrderPk:sum(packetBytes) 	17920
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].app 	rcvdPk:count 	359
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[4].app 	rcvdPk:sum(packetBytes) 	183808
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[4].app 	endToEndDelay:histogram
+field count 359
+field mean 1.0059678474311
+field stddev 3.0973490240169
+field sum 361.14245722777
+field sqrsum 3797.7961099284
+field min 0.000956011007
+field max 19.180740436131
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-9.053994504504	0
+bin	-7.8466677511593	0
+bin	-6.6393409978147	0
+bin	-5.43201424447	0
+bin	-4.2246874911253	0
+bin	-3.0173607377807	0
+bin	-1.810033984436	0
+bin	-0.60270723109133	289
+bin	0.60461952225333	35
+bin	1.811946275598	5
+bin	3.0192730289427	3
+bin	4.2265997822873	5
+bin	5.433926535632	2
+bin	6.6412532889767	2
+bin	7.8485800423213	1
+bin	9.055906795666	2
+bin	10.263233549011	2
+bin	11.470560302355	3
+bin	12.6778870557	4
+bin	13.885213809045	1
+bin	15.092540562389	1
+bin	16.299867315734	1
+bin	17.507194069079	2
+bin	18.714520822423	1
+bin	19.921847575768	0
+bin	21.129174329113	0
+bin	22.336501082457	0
+bin	23.543827835802	0
+bin	24.751154589147	0
+bin	25.958481342491	0
+bin	27.165808095836	0
+scalar scenarioPRJP1.node[4].app 	sentPk:count 	2613
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[4].app 	sentPk:sum(packetBytes) 	1337856
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[4].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[4].udp 	passedUpPk:count 	415
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[4].udp 	rcvdPk:count 	415
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[4].udp 	rcvdPk:sum(packetBytes) 	215800
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].udp 	sentPk:count 	2613
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[4].udp 	sentPk:sum(packetBytes) 	1358760
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].networkLayer.arp 	failedARPResolution:count 	76
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[4].networkLayer.arp 	completedARPResolution:count 	175
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[4].networkLayer.arp 	initiatedARPResolution:count 	89
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[4].networkLayer.arp 	sentReply:count 	21
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[4].networkLayer.arp 	sentReq:count 	252
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[4].mobility 	startTime 	0.1
+scalar scenarioPRJP1.node[4].mobility 	totalTime 	949.9
+scalar scenarioPRJP1.node[4].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[4].mobility 	minSpeed 	2.4755573001057e-13
+scalar scenarioPRJP1.node[4].mobility 	maxSpeed 	16.353339164029
+scalar scenarioPRJP1.node[4].mobility 	totalDistance 	9213.312622876
+scalar scenarioPRJP1.node[4].mobility 	totalCO2Emission 	2323.1537948938
+scalar scenarioPRJP1.node[4].wlan.mgmt 	dataQueueLen:max 	12
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[4].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[4].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[4].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of received packets" 	4034
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of collisions" 	2329
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of retry for AC 0" 	15883
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent and received bits" 	3423200
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent packet within AC 0" 	815
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sentWithoutRetry AC 0" 	752
+scalar scenarioPRJP1.node[4].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numGivenUp AC 0" 	2631
+scalar scenarioPRJP1.node[4].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[4].wlan.mac 	rcvdPkFromLL:count 	28823
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[4].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	8199768
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].wlan.mac 	sentDownPk:count 	25145
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[4].wlan.mac 	sentDownPk:sum(packetBytes) 	7494224
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].wlan.mac 	rcvdPkFromHL:count 	5228
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[4].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	1423248
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].wlan.mac 	passedUpPk:count 	3488
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[4].wlan.mac 	passedUpPk:sum(packetBytes) 	777544
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[4].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[4].wlan.radio 	transmissionState:count 	100580
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[4].wlan.radio 	receptionState:count 	108439
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[4].wlan.radio 	radioMode:count 	50292
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[4].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[4].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[4].wlan.radio 	packetErrorRate:histogram
+field count 28823
+field mean 0.078584508268119
+field stddev 0.26307525578319
+field sum 2265.041281812
+field sqrsum 2172.727142238
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	26191
+bin	0.033333333333333	87
+bin	0.066666666666667	44
+bin	0.1	39
+bin	0.13333333333333	41
+bin	0.16666666666667	29
+bin	0.2	21
+bin	0.23333333333333	20
+bin	0.26666666666667	31
+bin	0.3	19
+bin	0.33333333333333	12
+bin	0.36666666666667	16
+bin	0.4	14
+bin	0.43333333333333	22
+bin	0.46666666666667	10
+bin	0.5	2227
+statistic scenarioPRJP1.node[4].wlan.radio 	minSNIR:histogram
+field count 28823
+field mean 19465.784099446
+field stddev 85315.448861324
+field sum 561062295.09833
+field sqrsum 2.2070895292563e+14
+field min 0.00014115045909593
+field max 2232002.8197533
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-20263.049514967	0
+bin	-17559.365753717	0
+bin	-14855.681992466	0
+bin	-12151.998231216	0
+bin	-9448.3144699661	0
+bin	-6744.630708716	0
+bin	-4040.9469474659	0
+bin	-1337.2631862157	21963
+bin	1366.4205750344	1749
+bin	4070.1043362845	861
+bin	6773.7880975347	554
+bin	9477.4718587848	383
+bin	12181.155620035	284
+bin	14884.839381285	196
+bin	17588.523142535	153
+bin	20292.206903785	122
+bin	22995.890665035	86
+bin	25699.574426286	76
+bin	28403.258187536	66
+bin	31106.941948786	55
+bin	33810.625710036	44
+bin	36514.309471286	38
+bin	39217.993232536	37
+bin	41921.676993786	31
+bin	44625.360755037	29
+bin	47329.044516287	24
+bin	50032.728277537	27
+bin	52736.412038787	26
+bin	55440.095800037	31
+bin	58143.779561287	30
+bin	60847.463322537	1958
+scalar scenarioPRJP1.node[4].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[4].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].lo0.lo 	rcvdPkFromHL:count 	415
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[4].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	215800
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[4].lo0.lo 	passedUpPk:count 	415
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[4].lo0.lo 	passedUpPk:sum(packetBytes) 	215800
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].app 	"Total sent" 	2618
+scalar scenarioPRJP1.node[7].app 	"Total received" 	547
+scalar scenarioPRJP1.node[7].app 	"Total deleted" 	21
+scalar scenarioPRJP1.node[7].app 	dropPk:count 	21
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, count"
+scalar scenarioPRJP1.node[7].app 	dropPk:sum(packetBytes) 	10752
+attr interpolationmode  none
+attr source  dropPk
+attr title  "packets dropped, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].app 	outOfOrderPk:count 	41
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, count"
+scalar scenarioPRJP1.node[7].app 	outOfOrderPk:sum(packetBytes) 	20992
+attr interpolationmode  none
+attr source  outOfOrderPk
+attr title  "packets received out of order, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].app 	rcvdPk:count 	547
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[7].app 	rcvdPk:sum(packetBytes) 	280064
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic scenarioPRJP1.node[7].app 	endToEndDelay:histogram
+field count 547
+field mean 1.0295690238981
+field stddev 3.1367719432808
+field sum 563.17425607228
+field sqrsum 5952.1054394968
+field min 0.000956069345
+field max 19.57769206142
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-6.51169194371	0
+bin	-5.6433388753027	0
+bin	-4.7749858068953	0
+bin	-3.906632738488	0
+bin	-3.0382796700807	0
+bin	-2.1699266016733	0
+bin	-1.301573533266	0
+bin	-0.43322046485867	430
+bin	0.43513260354867	43
+bin	1.303485671956	17
+bin	2.1718387403633	14
+bin	3.0401918087707	3
+bin	3.908544877178	3
+bin	4.7768979455853	2
+bin	5.6452510139927	2
+bin	6.5136040824	2
+bin	7.3819571508073	6
+bin	8.2503102192147	2
+bin	9.118663287622	4
+bin	9.9870163560293	1
+bin	10.855369424437	0
+bin	11.723722492844	2
+bin	12.592075561251	3
+bin	13.460428629659	2
+bin	14.328781698066	3
+bin	15.197134766473	0
+bin	16.065487834881	2
+bin	16.933840903288	1
+bin	17.802193971695	1
+bin	18.670547040103	3
+bin	19.53890010851	1
+scalar scenarioPRJP1.node[7].app 	sentPk:count 	2618
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[7].app 	sentPk:sum(packetBytes) 	1340416
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].udp 	droppedPkBadChecksum:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (checksum error), count"
+scalar scenarioPRJP1.node[7].udp 	droppedPkWrongPort:count 	0
+attr interpolationmode  none
+attr title  "packets dropped (wrong port), count"
+scalar scenarioPRJP1.node[7].udp 	passedUpPk:count 	609
+attr interpolationmode  none
+attr title  "packets passed up, count"
+scalar scenarioPRJP1.node[7].udp 	rcvdPk:count 	609
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar scenarioPRJP1.node[7].udp 	rcvdPk:sum(packetBytes) 	316680
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].udp 	sentPk:count 	2618
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar scenarioPRJP1.node[7].udp 	sentPk:sum(packetBytes) 	1361360
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].networkLayer.arp 	failedARPResolution:count 	90
+attr title  "ARP failed resolutions, count"
+scalar scenarioPRJP1.node[7].networkLayer.arp 	completedARPResolution:count 	267
+attr title  "ARP completed resolutions, count"
+scalar scenarioPRJP1.node[7].networkLayer.arp 	initiatedARPResolution:count 	115
+attr title  "ARP initiated resolutions, count"
+scalar scenarioPRJP1.node[7].networkLayer.arp 	sentReply:count 	16
+attr title  "ARP replies sent, count"
+scalar scenarioPRJP1.node[7].networkLayer.arp 	sentReq:count 	319
+attr title  "ARP request sent, count"
+scalar scenarioPRJP1.node[7].mobility 	startTime 	2.5
+scalar scenarioPRJP1.node[7].mobility 	totalTime 	947.5
+scalar scenarioPRJP1.node[7].mobility 	stopTime 	950
+scalar scenarioPRJP1.node[7].mobility 	minSpeed 	2.475499659625e-13
+scalar scenarioPRJP1.node[7].mobility 	maxSpeed 	16.406951261235
+scalar scenarioPRJP1.node[7].mobility 	totalDistance 	8464.6215961233
+scalar scenarioPRJP1.node[7].mobility 	totalCO2Emission 	2338.9400272539
+scalar scenarioPRJP1.node[7].wlan.mgmt 	dataQueueLen:max 	11
+attr interpolationmode  sample-hold
+attr title  "data queue length, max"
+scalar scenarioPRJP1.node[7].wlan.mgmt 	dataQueueLen:timeavg 	0
+attr interpolationmode  sample-hold
+attr title  "data queue length, timeavg"
+scalar scenarioPRJP1.node[7].wlan.mgmt 	dropPkByQueue:count 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, count"
+scalar scenarioPRJP1.node[7].wlan.mgmt 	dropPkByQueue:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkByQueue
+attr title  "packets dropped by queue, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of received packets" 	6826
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of collisions" 	3879
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of internal collisions" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of retry for AC 0" 	29427
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of retry for AC 1" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of retry for AC 2" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"number of retry for AC 3" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent and received bits" 	3334848
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent packet within AC 0" 	814
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent packet within AC 1" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent packet within AC 2" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent packet within AC 3" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sent in TXOP " 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sentWithoutRetry AC 0" 	734
+scalar scenarioPRJP1.node[7].wlan.mac 	"sentWithoutRetry AC 1" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sentWithoutRetry AC 2" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"sentWithoutRetry AC 3" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numGivenUp AC 0" 	4886
+scalar scenarioPRJP1.node[7].wlan.mac 	"numGivenUp AC 1" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numGivenUp AC 2" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numGivenUp AC 3" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numDropped AC 0" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numDropped AC 1" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numDropped AC 2" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	"numDropped AC 3" 	0
+scalar scenarioPRJP1.node[7].wlan.mac 	rcvdPkFromLL:count 	41195
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, count"
+scalar scenarioPRJP1.node[7].wlan.mac 	rcvdPkFromLL:sum(packetBytes) 	11210174
+attr interpolationmode  none
+attr source  packetReceivedFromLower
+attr title  "packets received from lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].wlan.mac 	sentDownPk:count 	43775
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, count"
+scalar scenarioPRJP1.node[7].wlan.mac 	sentDownPk:sum(packetBytes) 	12078924
+attr interpolationmode  none
+attr source  packetSentToLower
+attr title  "packets sent to lower layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].wlan.mac 	rcvdPkFromHL:count 	7522
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[7].wlan.mac 	rcvdPkFromHL:sum(packetBytes) 	2062032
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].wlan.mac 	passedUpPk:count 	5372
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[7].wlan.mac 	passedUpPk:sum(packetBytes) 	1276336
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
+statistic scenarioPRJP1.node[7].wlan.radio 	radioChannel:histogram
+field count 1
+field mean 3
+field stddev -nan
+field sum 3
+field sqrsum 9
+field min 3
+field max 3
+attr interpolationmode  sample-hold
+attr source  radioChannelChanged
+attr title  "Radio channel, histogram"
+bin	-INF	0
+bin	2	0
+bin	3	1
+bin	4	0
+scalar scenarioPRJP1.node[7].wlan.radio 	transmissionState:count 	175100
+attr interpolationmode  sample-hold
+attr source  transmissionStateChanged
+attr title  "Radio transmission state, count"
+scalar scenarioPRJP1.node[7].wlan.radio 	receptionState:count 	170791
+attr interpolationmode  sample-hold
+attr source  receptionStateChanged
+attr title  "Radio reception state, count"
+scalar scenarioPRJP1.node[7].wlan.radio 	radioMode:count 	87552
+attr interpolationmode  sample-hold
+attr source  radioModeChanged
+attr title  "Radio mode, count"
+statistic scenarioPRJP1.node[7].wlan.radio 	symbolErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  symbolErrorRate
+attr title  "Symbol error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[7].wlan.radio 	bitErrorRate:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr source  bitErrorRate
+attr title  "Bit error rate, histogram"
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic scenarioPRJP1.node[7].wlan.radio 	packetErrorRate:histogram
+field count 41195
+field mean 0.092103622107043
+field stddev 0.2834626763703
+field sum 3794.2087126996
+field sqrsum 3659.4431214109
+field min 0
+field max 1
+attr source  packetErrorRate
+attr title  "Packet error rate, histogram"
+bin	-INF	4625
+bin	-3.1274982603691e-11	0
+bin	-2.7104984923199e-11	0
+bin	-2.2934987242706e-11	0
+bin	-1.8764989562214e-11	0
+bin	-1.4594991881722e-11	0
+bin	-1.042499420123e-11	0
+bin	-6.2549965207381e-12	0
+bin	-2.084998840246e-12	33662
+bin	2.084998840246e-12	109
+bin	6.2549965207381e-12	43
+bin	1.042499420123e-11	24
+bin	1.4594991881722e-11	21
+bin	1.8764989562214e-11	20
+bin	2.2934987242706e-11	19
+bin	2.7104984923199e-11	6
+bin	3.1274982603691e-11	5
+bin	3.5444980284183e-11	14
+bin	3.9614977964675e-11	12
+bin	4.3784975645167e-11	8
+bin	4.7954973325659e-11	8
+bin	5.2124971006151e-11	5
+bin	5.6294968686643e-11	6
+bin	6.0464966367135e-11	12
+bin	6.4634964047627e-11	9
+bin	6.8804961728119e-11	7
+bin	7.2974959408612e-11	2
+bin	7.7144957089104e-11	6
+bin	8.1314954769596e-11	5
+bin	8.5484952450088e-11	2
+bin	8.965495013058e-11	6
+bin	9.3824947811072e-11	2559
+statistic scenarioPRJP1.node[7].wlan.radio 	minSNIR:histogram
+field count 41195
+field mean 2634.3058633521
+field stddev 17160.458525721
+field sum 108520230.04079
+field sqrsum 12416739666964
+field min 0.00099419879906511
+field max 1513338.1144711
+attr source  minSNIR
+attr title  "Min SNIR, histogram"
+bin	-INF	0
+bin	-12175.912913731	0
+bin	-10551.693591199	0
+bin	-8927.4742686672	0
+bin	-7303.254946135	0
+bin	-5679.0356236029	0
+bin	-4054.8163010707	0
+bin	-2430.5969785386	0
+bin	-806.37765600641	33663
+bin	817.84166652574	2608
+bin	2442.0609890579	892
+bin	4066.28031159	556
+bin	5690.4996341222	461
+bin	7314.7189566543	369
+bin	8938.9382791865	314
+bin	10563.157601719	261
+bin	12187.376924251	215
+bin	13811.596246783	185
+bin	15435.815569315	176
+bin	17060.034891847	139
+bin	18684.254214379	116
+bin	20308.473536912	119
+bin	21932.692859444	75
+bin	23556.912181976	94
+bin	25181.131504508	84
+bin	26805.35082704	63
+bin	28429.570149572	56
+bin	30053.789472104	49
+bin	31678.008794637	33
+bin	33302.228117169	48
+bin	34926.447439701	36
+bin	36550.666762233	583
+scalar scenarioPRJP1.node[7].lo0.lo 	droppedPkBitError:count 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, count"
+scalar scenarioPRJP1.node[7].lo0.lo 	droppedPkBitError:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  dropPkBitError
+attr title  "packets dropped/bit error, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].lo0.lo 	rcvdPkFromHL:count 	609
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, count"
+scalar scenarioPRJP1.node[7].lo0.lo 	rcvdPkFromHL:sum(packetBytes) 	316680
+attr interpolationmode  none
+attr source  packetReceivedFromUpper
+attr title  "packets received from higher layer, sum(packetBytes)"
+scalar scenarioPRJP1.node[7].lo0.lo 	passedUpPk:count 	609
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, count"
+scalar scenarioPRJP1.node[7].lo0.lo 	passedUpPk:sum(packetBytes) 	316680
+attr interpolationmode  none
+attr source  packetSentToUpper
+attr title  "packets passed to higher layer, sum(packetBytes)"
