@@ -35,10 +35,10 @@ def FiltroByPathLoss(FilesList, opcao):
 			opcao = i
 			break	
 
-	AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE  = [defaultdict(list) for dummy in range(8)]
-	DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE  = [defaultdict(list) for dummy in range(8)]
-	DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE  = [defaultdict(list) for dummy in range(8)]
-	OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE  = [defaultdict(list) for dummy in range(8)]
+	AODV10E2ED, AODV10RATE, AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE  = [defaultdict(list) for dummy in range(10)]
+	DSR10E2ED, DSR10RATE, DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE  = [defaultdict(list) for dummy in range(10)]
+	DYMO10E2ED, DYMO10RATE, DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE  = [defaultdict(list) for dummy in range(10)]
+	OLSR10E2ED, OLSR10RATE, OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE  = [defaultdict(list) for dummy in range(10)]
 	Recived='rcvdPk'
 	Sent='sentPk'
 	E2ED='E2ED'
@@ -48,6 +48,13 @@ def FiltroByPathLoss(FilesList, opcao):
 			for k, v in row.iteritems():
 				if opcao in k:
 					if 'AODVRouting-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								AODV10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								AODV10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								AODV10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								AODV25E2ED[E2ED].append(v)
@@ -77,6 +84,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								AODV100RATE[Sent].append(v)
 					elif 'DSRUU-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								DSR10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								DSR10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								DSR10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								DSR25E2ED[E2ED].append(v)
@@ -106,6 +120,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								DSR100RATE[Sent].append(v)
 					elif 'DYMOUM-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								DYMO10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								DYMO10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								DYMO10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								DYMO25E2ED[E2ED].append(v)
@@ -135,6 +156,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								DYMO100RATE[Sent].append(v)
 					elif 'OLSR-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								OLSR10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								OLSR10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								OLSR10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								OLSR25E2ED[E2ED].append(v)
@@ -163,13 +191,13 @@ def FiltroByPathLoss(FilesList, opcao):
 								OLSR100RATE[Recived].append(v)
 							if 'sentPk' in k:
 								OLSR100RATE[Sent].append(v)
-	AODV = [AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE]
-	DSR = [DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE]
-	DYMO = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
-	OLSR = [OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
+	AODV = [AODV10E2ED, AODV10RATE, AODV25E2ED, AODV25RATE, AODV50E2ED, AODV50RATE, AODV75E2ED, AODV75RATE, AODV100E2ED, AODV100RATE]
+	DSR = [DSR10E2ED, DSR10RATE, DSR25E2ED, DSR25RATE, DSR50E2ED, DSR50RATE, DSR75E2ED, DSR75RATE, DSR100E2ED, DSR100RATE]
+	DYMO = [DYMO10E2ED, DYMO10RATE, DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
+	OLSR = [OLSR10E2ED, OLSR10RATE, OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
 	Protocolos = [AODV,DSR,DYMO,OLSR]
 
-	AODVMean, AODVDesv, AODVPDR, DYMOMean, DYMODesv, DYMOPDR, OLSRMean, OLSRDesv, OLSRPDR, DSRMean, DSRDesv, DSRPDR  = [[0]*4 for dummy in range(12)]
+	AODVMean, AODVDesv, AODVPDR, DYMOMean, DYMODesv, DYMOPDR, OLSRMean, OLSRDesv, OLSRPDR, DSRMean, DSRDesv, DSRPDR  = [[0]*5 for dummy in range(12)]
 
 	Statistics(AODV, AODVMean, AODVDesv, AODVPDR)
 	#print AODVMean
@@ -184,7 +212,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	#print OLSRMean
 	#print OLSRDesv
 	
-	XAxis = [25, 50, 75, 100]
+	XAxis = [10, 25, 50, 75, 100]
 	TODO=[AODVMean,DSRMean,DYMOMean,OLSRMean]
 	TODODesv=[AODVDesv,DSRDesv,DYMODesv,OLSRDesv]
 	TODOPDR=[AODVPDR,DSRPDR,DYMOPDR,OLSRPDR]
@@ -199,10 +227,10 @@ def FiltroByPathLoss(FilesList, opcao):
 		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	
-	subplot1.legend(loc='upper left', ncol = 1, prop={'size':20})
+	subplot1.legend(loc='upper right', ncol = 1, prop={'size':20})
 	subplot1.set_xlim((0, 125))
 	subplot1.set_ylim((0, 5))
-	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
+	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
 	plt.ylabel('E2ED in seconds', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -222,7 +250,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot1.grid(which='minor', alpha=0.4)
 	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('LNS-E2ED.png', format='png')
+	plt.savefig('FS-E2ED.png', format='png')
 	plt.show()
 
 	
@@ -238,7 +266,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
 	subplot2.set_ylim((0, 0.5))
-	plt.title('Impact on Protocols over Log-Normal-Shadowing', fontsize=20)
+	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -258,13 +286,13 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot2.grid(which='minor', alpha=0.4)
 	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('LNS-PDR.png', format='png')
+	plt.savefig('FS-PDR.png', format='png')
 	plt.show()
 
 	return
 
 def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
-	sumS, sumR = [[0]*4 for dummy in range(2)]
+	sumS, sumR = [[0]*5 for dummy in range(2)]
 	m=0
 	for i in Prot:
 		if m == 0:
@@ -334,6 +362,23 @@ def Statistics(Prot,ProtMeans,ProtDesvs,ProtPDR):
 					M = np.array(v).astype(np.float64)
 					sumS[3] = np.sum(M)
 			ProtPDR[3]=sumR[3]/sumS[3]
+			m+=1
+		elif m == 8:
+			M = np.array(i.values()).astype(np.float64)
+			mean = M.mean()
+			desvest = np.std(M, ddof=1) / 2
+			ProtMeans[4]=mean
+			ProtDesvs[4]=desvest
+			m+=1
+		elif m == 9:
+			for k,v in i.iteritems():
+				if 'rcvdPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumR[4] = np.sum(M)
+				if 'sentPk' in k:
+					M = np.array(v).astype(np.float64)
+					sumS[4] = np.sum(M)
+			ProtPDR[4]=sumR[4]/sumS[4]
 			m+=1
 	#print ProtMeans
 	#print ProtDesvs

@@ -36,10 +36,10 @@ def FiltroByPathLoss(FilesList, opcao):
 			opcao = i
 			break	
 
-	FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE  = [defaultdict(list) for dummy in range(8)]
-	LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE  = [defaultdict(list) for dummy in range(8)]
-	NAK25E2ED, NAK25RATE, NAK50E2ED, NAK50RATE, NAK75E2ED, NAK75RATE, NAK100E2ED, NAK100RATE  = [defaultdict(list) for dummy in range(8)]
-	TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE  = [defaultdict(list) for dummy in range(8)]
+	FS10E2ED, FS10RATE, FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE  = [defaultdict(list) for dummy in range(10)]
+	LNS10E2ED, LNS10RATE, LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE  = [defaultdict(list) for dummy in range(10)]
+	NAK10E2ED, NAK10RATE, NAK25E2ED, NAK25RATE, NAK50E2ED, NAK50RATE, NAK75E2ED, NAK75RATE, NAK100E2ED, NAK100RATE  = [defaultdict(list) for dummy in range(10)]
+	TRG10E2ED, TRG10RATE, TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE  = [defaultdict(list) for dummy in range(10)]
 	
 	Recived='rcvdPk'
 	Sent='sentPk'
@@ -50,6 +50,13 @@ def FiltroByPathLoss(FilesList, opcao):
 			for k, v in row.iteritems():
 				if opcao in k:
 					if '-FS-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								FS10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								FS10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								FS10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								FS25E2ED[E2ED].append(v)
@@ -79,6 +86,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								FS100RATE[Sent].append(v)
 					elif '-LNS-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								LNS10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								LNS10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								LNS10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								LNS25E2ED[E2ED].append(v)
@@ -108,6 +122,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								LNS100RATE[Sent].append(v)
 					elif '-TRG-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								TRG10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								TRG10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								TRG10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								TRG25E2ED[E2ED].append(v)
@@ -138,6 +159,13 @@ def FiltroByPathLoss(FilesList, opcao):
 								TRG100RATE[Sent].append(v)
 	"""
 					elif '-NAK-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								NAK10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								NAK25E2ED[E2ED].append(v)
@@ -167,13 +195,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								NAK100RATE[Sent].append(v)
 	"""
-	FS = [FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
-	LNS = [LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
-	TRG = [TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE]
-	#NAK = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
-	Protocolos = [FS,LNS] #[FS,LNS,NAK,TRG]
+	FS = [FS10E2ED, FS10RATE, FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
+	LNS = [LNS10E2ED, LNS10RATE, LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
+	TRG = [TRG10E2ED, TRG10RATE, TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE]
+	#NAK = [DYMO10E2ED, DYMO10RATE, DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
+	Protocolos = [FS,LNS,TRG] #[FS,LNS,NAK,TRG]
 
-	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*4 for dummy in range(12)]
+	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*5 for dummy in range(12)]
 
 	Statistics(FS, FSMean, FSDesv, FSPDR)
 	#print AODVMean
@@ -241,7 +269,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
-	subplot2.set_ylim((0, 0.7))
+	subplot2.set_ylim((0, 0.5))
 	plt.title('Impact of DYMO over Pathloss', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
@@ -250,8 +278,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	major_ticksx = np.arange(0, 126, 25)
 	minor_ticksx = np.arange(0, 126, 5)
 	# major ticks every 1, minor ticks every 0.25 en el eje Y
-	major_ticksy = np.arange(0, 0.7001, 0.1)
-	minor_ticksy = np.arange(0, 0.7001, 0.025)
+	major_ticksy = np.arange(0, 0.5001, 0.1)
+	minor_ticksy = np.arange(0, 0.5001, 0.025)
 	#Dibujar en el plot
 	subplot2.set_xticks(major_ticksx) 
 	subplot2.set_xticks(minor_ticksx, minor=True)

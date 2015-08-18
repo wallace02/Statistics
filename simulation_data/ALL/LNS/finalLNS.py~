@@ -246,8 +246,8 @@ def FiltroByPathLoss(FilesList, opcao):
 	major_ticksx = np.arange(0, 126, 25)
 	minor_ticksx = np.arange(0, 126, 5)
 	# major ticks every 1, minor ticks every 0.25 en el eje Y
-	major_ticksy = np.arange(0, 0.8001, 0.1)
-	minor_ticksy = np.arange(0, 0.8001, 0.025)
+	major_ticksy = np.arange(0, 0.5001, 0.1)
+	minor_ticksy = np.arange(0, 0.5001, 0.025)
 	#Dibujar en el plot
 	subplot2.set_xticks(major_ticksx) 
 	subplot2.set_xticks(minor_ticksx, minor=True)

@@ -36,10 +36,10 @@ def FiltroByPathLoss(FilesList, opcao):
 			opcao = i
 			break	
 
-	FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE  = [defaultdict(list) for dummy in range(8)]
-	LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE  = [defaultdict(list) for dummy in range(8)]
-	NAK25E2ED, NAK25RATE, NAK50E2ED, NAK50RATE, NAK75E2ED, NAK75RATE, NAK100E2ED, NAK100RATE  = [defaultdict(list) for dummy in range(8)]
-	TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE  = [defaultdict(list) for dummy in range(8)]
+	FS10E2ED, FS10RATE, FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE  = [defaultdict(list) for dummy in range(10)]
+	LNS10E2ED, LNS10RATE, LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE  = [defaultdict(list) for dummy in range(10)]
+	NAK10E2ED, NAK10RATE, NAK25E2ED, NAK25RATE, NAK50E2ED, NAK50RATE, NAK75E2ED, NAK75RATE, NAK100E2ED, NAK100RATE  = [defaultdict(list) for dummy in range(10)]
+	TRG10E2ED, TRG10RATE, TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE  = [defaultdict(list) for dummy in range(10)]
 	
 	Recived='rcvdPk'
 	Sent='sentPk'
@@ -50,6 +50,13 @@ def FiltroByPathLoss(FilesList, opcao):
 			for k, v in row.iteritems():
 				if opcao in k:
 					if '-FS-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								FS10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								FS10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								FS10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								FS25E2ED[E2ED].append(v)
@@ -79,6 +86,13 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								FS100RATE[Sent].append(v)
 					elif '-LNS-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								LNS10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								LNS10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								LNS10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								LNS25E2ED[E2ED].append(v)
@@ -107,37 +121,14 @@ def FiltroByPathLoss(FilesList, opcao):
 								LNS100RATE[Recived].append(v)
 							if 'sentPk' in k:
 								LNS100RATE[Sent].append(v)
-	"""
-					elif '-NAK-' in k:
-						if '-25n-' in k:
-							if 'endToEndDelay' in k:
-								NAK25E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK25RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK25RATE[Sent].append(v)
-						if '-50n-' in k:
-							if 'endToEndDelay' in k:
-								NAK50E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK50RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK50RATE[Sent].append(v)
-						if '-75n-' in k:
-							if 'endToEndDelay' in k:
-								NAK75E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK75RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK75RATE[Sent].append(v)
-						if '-100n-' in k:
-							if 'endToEndDelay' in k:
-								NAK100E2ED[E2ED].append(v)
-							if 'rcvdPk' in k:
-								NAK100RATE[Recived].append(v)
-							if 'sentPk' in k:
-								NAK100RATE[Sent].append(v)
 					elif '-TRG-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								TRG10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								TRG10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								TRG10RATE[Sent].append(v)
 						if '-25n-' in k:
 							if 'endToEndDelay' in k:
 								TRG25E2ED[E2ED].append(v)
@@ -167,13 +158,50 @@ def FiltroByPathLoss(FilesList, opcao):
 							if 'sentPk' in k:
 								TRG100RATE[Sent].append(v)
 	"""
-	FS = [FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
-	LNS = [LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
-	#NAK = [DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
-	#TRG = [OLSR25E2ED, OLSR25RATE, OLSR50E2ED, OLSR50RATE, OLSR75E2ED, OLSR75RATE, OLSR100E2ED, OLSR100RATE]
-	Protocolos = [FS,LNS] #[FS,LNS,NAK,TRG]
+					elif '-NAK-' in k:
+						if '-10n-' in k:
+							if 'endToEndDelay' in k:
+								NAK10E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK10RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK10RATE[Sent].append(v)
+						if '-25n-' in k:
+							if 'endToEndDelay' in k:
+								NAK25E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK25RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK25RATE[Sent].append(v)
+						if '-50n-' in k:
+							if 'endToEndDelay' in k:
+								NAK50E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK50RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK50RATE[Sent].append(v)
+						if '-75n-' in k:
+							if 'endToEndDelay' in k:
+								NAK75E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK75RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK75RATE[Sent].append(v)
+						if '-100n-' in k:
+							if 'endToEndDelay' in k:
+								NAK100E2ED[E2ED].append(v)
+							if 'rcvdPk' in k:
+								NAK100RATE[Recived].append(v)
+							if 'sentPk' in k:
+								NAK100RATE[Sent].append(v)
+	"""
+	FS = [FS10E2ED, FS10RATE, FS25E2ED, FS25RATE, FS50E2ED, FS50RATE, FS75E2ED, FS75RATE, FS100E2ED, FS100RATE]
+	LNS = [LNS10E2ED, LNS10RATE, LNS25E2ED, LNS25RATE, LNS50E2ED, LNS50RATE, LNS75E2ED, LNS75RATE, LNS100E2ED, LNS100RATE]
+	TRG = [TRG10E2ED, TRG10RATE, TRG25E2ED, TRG25RATE, TRG50E2ED, TRG50RATE, TRG75E2ED, TRG75RATE, TRG100E2ED, TRG100RATE]
+	#NAK = [DYMO10E2ED, DYMO10RATE, DYMO25E2ED, DYMO25RATE, DYMO50E2ED, DYMO50RATE, DYMO75E2ED, DYMO75RATE, DYMO100E2ED, DYMO100RATE]
+	Protocolos = [FS,LNS,TRG] #[FS,LNS,NAK,TRG]
 
-	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*4 for dummy in range(12)]
+	FSMean, FSDesv, FSPDR, NAKMean, NAKDesv, NAKPDR, TRGMean, TRGDesv, TRGPDR, LNSMean, LNSDesv, LNSPDR  = [[0]*5 for dummy in range(12)]
 
 	Statistics(FS, FSMean, FSDesv, FSPDR)
 	#print AODVMean
@@ -181,25 +209,25 @@ def FiltroByPathLoss(FilesList, opcao):
 	Statistics(LNS, LNSMean, LNSDesv, LNSPDR)
 	#print DSRMean
 	#print DSRDesv
-	##################Statistics(NAK, NAKMean, NAKDesv, NAKPDR)
+	Statistics(TRG, TRGMean, TRGDesv, TRGPDR)
 	#print DYMOMean
 	#print DYMODesv
-	##################Statistics(TRG, TRGMean, TRGDesv, TRGPDR)
+	##################Statistics(NAK, NAKMean, NAKDesv, NAKPDR)
 	#print OLSRMean
 	#print OLSRDesv
 	
 	XAxis = [25, 50, 75, 100]
-	TODO=[FSMean,LNSMean] #,NAKMean,TRGMean]
-	TODODesv=[FSDesv,LNSDesv] #,NAKDesv,TRGDesv]
-	TODOPDR=[FSPDR,LNSPDR] #,NAKPDR,TRGPDR]
+	TODO=[FSMean,LNSMean,TRGMean] #,NAKMean]
+	TODODesv=[FSDesv,LNSDesv,TRGDesv] #,NAKDesv]
+	TODOPDR=[FSPDR,LNSPDR,TRGPDR] #,NAKPDR]
 	
-	label=["FS","LNS"] #,"NAK","TRG"]
-	marker=['*','p'] #,'o','D']
+	label=["FS","LNS","TRG"] #,"NAK"]
+	marker=['*','p','o'] #,'D']
 	
 	fig = plt.figure(figsize=(20, 10)) 
 	subplot1 = fig.add_subplot(1, 1, 1)
 	i=0
-	while i<2: #4:
+	while i<3: #4:
 		subplot1.errorbar(XAxis,TODO[i],yerr=TODODesv[i], label=label[i], marker = marker[i])
 		i+=1
 	
@@ -235,7 +263,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	figProt = plt.figure(figsize=(20, 10)) 
 	subplot2 = figProt.add_subplot(1, 1, 1)
 	i=0
-	while i<2: #4:
+	while i<3: #4:
 		subplot2.errorbar(XAxis,TODOPDR[i], label=label[i], marker = marker[i])
 		i+=1
 	
