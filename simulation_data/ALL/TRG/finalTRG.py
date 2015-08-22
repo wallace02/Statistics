@@ -230,7 +230,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	subplot1.legend(loc='upper right', ncol = 1, prop={'size':20})
 	subplot1.set_xlim((0, 125))
 	subplot1.set_ylim((0, 5))
-	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	plt.title('Impact on Protocols over Two-Ray-Ground', fontsize=20)
 	plt.ylabel('E2ED in seconds', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -250,7 +250,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot1.grid(which='minor', alpha=0.4)
 	subplot1.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('FS-E2ED.png', format='png')
+	plt.savefig('TRG-E2ED.png', format='png')
 	plt.show()
 
 	
@@ -266,7 +266,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	subplot2.legend(loc='upper left', ncol = 1, prop={'size':20})
 	subplot2.set_xlim((0, 125))
 	subplot2.set_ylim((0, 0.5))
-	plt.title('Impact on Protocols over Free-Space Pathloss', fontsize=20)
+	plt.title('Impact on Protocols over Two-Ray-Ground', fontsize=20)
 	plt.ylabel('Packet Delivery Rate', fontsize=20)
 	plt.xlabel('Quantity of Nodes', fontsize=20)
 	
@@ -286,7 +286,7 @@ def FiltroByPathLoss(FilesList, opcao):
 	# differnet settings for the grids:                               
 	subplot2.grid(which='minor', alpha=0.4)
 	subplot2.grid(which='major', alpha=0.9, linewidth=1.1)
-	plt.savefig('FS-PDR.png', format='png')
+	plt.savefig('TRG-PDR.png', format='png')
 	plt.show()
 
 	return
